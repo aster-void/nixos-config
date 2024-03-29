@@ -4,8 +4,8 @@
   users.users.aster.packages = with pkgs; [
       notion-app-enhanced
       slack
-      discord
       zoom-us
+      discord
       firefox
       screenfetch
       neofetch

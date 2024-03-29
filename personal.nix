@@ -1,3 +1,4 @@
+{pkgs, ...}: 
 {
   imports = [
     # uncomment this if you use nvidia cards.
@@ -41,6 +42,17 @@
     LC_TELEPHONE = "en_US.UTF-8";
     LC_TIME = "en_US.UTF-8";
   };
+
+  # IME
+  i18n.inputMethod = {
+    enabled = "fcitx5";
+    fcitx5.addons = with pkgs; [
+      fcitx5-gtk
+      fcitx5-mozc
+    ];
+  };
+  # this is necessary to run fcitx5 with a window manager like hyprland.
+  services.xserver.desktopManager.runXdgAutostartIfNone = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.aster = {

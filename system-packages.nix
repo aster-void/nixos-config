@@ -5,9 +5,11 @@
     kitty
     fish
 
-    # drivers
+    # I don't know what these are
     qt5.full
     qt6.qtwayland
+    gtk3
+    gtk4
 
     # IME modules
     fcitx5-mozc
@@ -27,6 +29,7 @@
     gcc
     zig
     rustc
+    rustup
     cargo
     go
 
