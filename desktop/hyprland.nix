@@ -5,6 +5,12 @@
 { config, pkgs, ... }:
 
 {
+  services.xserver.enable = true;
+  # launch Hyprland on startup
+  services.xserver.displayManager.setupCommands = ''
+    Hyprland
+  '';
+
   services.xserver.displayManager.defaultSession = "hyprland";
 
   programs.hyprland = {

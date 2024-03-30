@@ -85,13 +85,11 @@
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
+  services.xserver.libinput.enable = true;
 
   # Enable automatic login for the user.
-  # services.xserver.displayManager.autoLogin.enable = true;
-  # services.xserver.displayManager.autoLogin.user = "aster";
+  services.xserver.displayManager.autoLogin.enable = true;
+  services.xserver.displayManager.autoLogin.user = "aster";
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -143,9 +141,6 @@
 
   programs.bash = {
 	enableCompletion = true;
-    shellInit = ''
-      . ~/.bashrc-personal
-    '';
   };
 
   services.xserver.displayManager.setupCommands = ''

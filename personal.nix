@@ -11,6 +11,7 @@
     ./personal/git-alias.nix
     ./personal/shell-alias.nix
     ./personal/fonts.nix
+    ./personal/ime.nix
   ];
 
   environment.variables = {
