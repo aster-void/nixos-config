@@ -125,9 +125,9 @@
     ipv4 = true;
     ipv6 = true;
     publish = {
-		  enable = true;
+      enable = true;
       workstation = true;
-  	};
+    };
   };
 
   hardware.bluetooth.enable = true; # enables support for Bluetooth
@@ -149,6 +149,9 @@
 
   # Dbus
   services.dbus.enable = true;
+
+  # XDG (I'm not sure what this is)
+  xdg.portal.enable = true;
 
   security.polkit.enable = true;
   systemd = {
