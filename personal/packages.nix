@@ -15,4 +15,7 @@
       # yet another browser because more == better
       brave
   ];
+  environment.systemPackages = [
+    
+  ];
 }

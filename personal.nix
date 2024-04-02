@@ -13,6 +13,7 @@
     ./personal/fonts.nix # some ja and en fonts
     ./personal/ime.nix # fcitx5 + mozc
     ./personal/locale.nix # English + Asia/Tokyo
+    ./personal/aagl.nix # when will hoyov officially support linux?
   ];
 
   environment.variables = {
