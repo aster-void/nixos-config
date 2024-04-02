@@ -1,17 +1,18 @@
 {pkgs, ...}: 
 {
   imports = [
-    # uncomment this if you use nvidia cards.
+    # paste this into hardware-configuration.nix if you use nvidia cards.
     #./drivers/nvidia.nix
    
     # personal preferences. this works out of the box after running ./init.sh .
     ./personal/env.nix
-    ./personal/keymap.nix
+    ./personal/keymap.nix # workman. change it.
     ./personal/packages.nix
     ./personal/git-alias.nix
     ./personal/shell-alias.nix
-    ./personal/fonts.nix
-    ./personal/ime.nix
+    ./personal/fonts.nix # some ja and en fonts
+    ./personal/ime.nix # fcitx5 + mozc
+    ./personal/locale.nix # English + Asia/Tokyo
   ];
 
   environment.variables = {
@@ -26,41 +27,23 @@
     platformTheme = "kde";
   }; */
 
-  # Timezone + Languages.
-  time.timeZone = "Asia/Tokyo";
- 
-  # Select internationalisation properties.
-  i18n.defaultLocale = "en_US.UTF-8";
- 
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "en_US.UTF-8";
-    LC_IDENTIFICATION = "en_US.UTF-8";
-    LC_MEASUREMENT = "en_US.UTF-8";
-    LC_MONETARY = "ja_JP.UTF-8";
-    LC_NAME = "ja_JP.UTF-8";
-    LC_NUMERIC = "en_US.UTF-8";
-    LC_PAPER = "en_US.UTF-8";
-    LC_TELEPHONE = "en_US.UTF-8";
-    LC_TIME = "en_US.UTF-8";
-  };
-
-  # IME
-  i18n.inputMethod = {
-    enabled = "fcitx5";
-    fcitx5.addons = with pkgs; [
-      fcitx5-gtk
-      fcitx5-mozc
-    ];
-  };
-  # this is necessary to run fcitx5 with a window manager like hyprland.
-  services.xserver.desktopManager.runXdgAutostartIfNone = true;
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.aster = {
     isNormalUser = true;
     description = "aster";
     extraGroups = [ "mlocate" "networkmanager" "wheel" "samba" "vboxusers" ];
+    # refer ./passwd.nix for password.
     # refer personal/packages.nix for packages.
+  };
+
+  programs.git = {
+    enable = true;
+    config = {
+      user = {
+        name = "aster";
+        email = "137767097+aster-void@users.noreply.github.com";
+      };
+    };
   };
 
   programs.steam.enable = true;

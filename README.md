@@ -5,6 +5,8 @@
 1. run ./init.sh this will do most of the boilerplate works.
 2. rename the user in personal/packages.nix
 3. look inside personal.nix and follow the instructions there (may be more than one).
+(below are optional)
+4. initialize zoxide by running zoxide init $SHELLNAME >> /home/$USER/.bashrc
 
 ## Directory Structure
 

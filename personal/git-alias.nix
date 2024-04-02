@@ -11,10 +11,12 @@
 	aa = "add -A";
         c = "commit";
         cm = "commit -m";
+	cma = "add -A ; git commit -m ";
         co = "checkout";
         b = "branch";
 	ba = "branch -a";
         s = "status";
+	f = "fetch --prune";
 	upstream = "push --set-upstram origin";
         unstage = "reset HEAD --";
         last = "log -1 HEAD";

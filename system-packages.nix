@@ -20,6 +20,7 @@
     # dev
     git
     xsel
+    zoxide
 
     # code editors (if you like gui editors, add it to user's package)
     vim
@@ -32,6 +33,7 @@
     rustup
     cargo
     go
+    cmake # I'm not sure if this is a compiler
 
     # Language Servers
     rustfmt
@@ -41,5 +43,6 @@
     curl
     wget
     ripgrep
+    gettext
   ];
 }

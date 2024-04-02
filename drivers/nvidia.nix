@@ -12,7 +12,8 @@
   services.xserver.videoDrivers = ["nvidia"];
 
   # hyprland for nvidia
-  programs.hyprland.enableNvidiaPatches = true;
+  # we no longer need it, congrats
+  # programs.hyprland.enableNvidiaPatches = true;
 
   hardware.nvidia = {
     # Modesetting is required.
