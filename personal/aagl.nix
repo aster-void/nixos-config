@@ -14,7 +14,7 @@ in
     aagl-gtk-on-nix.module
     # aaglPkgs.module
   ];
-  programs.anime-game-launcher.enable = false;
+  programs.anime-game-launcher.enable = true;
   programs.anime-games-launcher.enable = false;
   programs.anime-borb-launcher.enable = false;
   programs.honkers-railway-launcher.enable = true;

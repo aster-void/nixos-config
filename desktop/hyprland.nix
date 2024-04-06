@@ -5,6 +5,9 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+    ./sddm.nix
+  ];
   services.xserver.enable = true;
   # launch Hyprland on startup
   services.xserver.displayManager.setupCommands = ''
@@ -20,10 +23,6 @@
     xwayland = {
       enable = true;
     };
-
-    # Optional
-    # Whether to enable patching wlroots for better Nvidia support
-    #enableNvidiaPatches = true;
   };
 
   environment.systemPackages = with pkgs; [

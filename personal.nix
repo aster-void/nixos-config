@@ -14,6 +14,7 @@
     ./personal/ime.nix # fcitx5 + mozc
     ./personal/locale.nix # English + Asia/Tokyo
     ./personal/aagl.nix # when will hoyov officially support linux?
+    ./passwd.nix # comment out this line if you don't need auto login
   ];
 
   environment.variables = {

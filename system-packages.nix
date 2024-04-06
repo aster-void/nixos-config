@@ -24,7 +24,7 @@
 
     # code editors (if you like gui editors, add it to user's package)
     vim
-    neovim
+    # neovim # use nvim/* instead;
 
     # compilers + interpreters (if any)
     gcc

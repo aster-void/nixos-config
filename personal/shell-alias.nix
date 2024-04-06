@@ -4,7 +4,7 @@
 
     gs = "git status";
 
-    nixman = "cd /etc/nixos/; ls -alh; sudo -s;";
+    nixman = "cd /etc/nixos/; sudo -s;";
     hman = "cd ~/.config/home-manager; ls";
     hypr = "cd ~/.config/hypr/; ls";
     home = "home-manager";

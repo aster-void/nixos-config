@@ -16,6 +16,7 @@
       #./samba.nix
       ./core-packages.nix
       ./system-packages.nix
+      ./nvim/main.nix
     ];
 
   # Bootloader.
