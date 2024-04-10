@@ -6,10 +6,7 @@
   programs.neovim = {
     enable = true;
     defaultEditor = true;
-    extraConfig = ''
-      set number relativenumber
-    '';
-    plugins = with pkgs.vimPlugins; [
-    ];
-  }
+    # plugins = with pkgs.vimPlugins; [
+    # ];
+  };
 }

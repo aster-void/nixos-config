@@ -14,8 +14,10 @@
     firefox    
     # yet another browser because more == better
     brave
+    # other GUI tools
+    libreoffice
   ];
-  environment.systemPackages = [
+  environment.systemPackages = with pkgs; [
     btop
   ];
 }

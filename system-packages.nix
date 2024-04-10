@@ -16,6 +16,12 @@
 
     # gnome-only
     pkgs.gnomeExtensions.kimpanel
+    
+    # core functionality
+    dolphin # gui directory preview, necesarry for looking for wallpaper
+    feh # image viewer that is too simple
+    gwenview # slightly better (I wish)
+    imagemagick # image editor i guess?
 
     # dev
     git
@@ -25,6 +31,7 @@
     # code editors (if you like gui editors, add it to user's package)
     vim
     # neovim # use nvim/* instead;
+    helix
 
     # compilers + interpreters (if any)
     gcc

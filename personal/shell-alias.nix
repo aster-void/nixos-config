@@ -1,6 +1,7 @@
 {
   environment.shellAliases = {
     n = "nvim";
+    h = "hx";
 
     gs = "git status";
 
