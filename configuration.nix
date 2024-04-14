@@ -71,6 +71,7 @@
   # Enable sound with pipewire.
   sound.enable = true;
   hardware.pulseaudio.enable = false;
+  hardware.pulseaudio.support32Bit = true;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -78,19 +79,18 @@
     alsa.support32Bit = true;
     pulse.enable = true;
     # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
+    jack.enable = true;
 
     # use the example session manager (no others are packaged yet so this is enabled by default,
     # no need to redefine it in your config for now)
-    #media-session.enable = true;
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
   services.xserver.libinput.enable = true;
 
   # Enable automatic login for the user.
-  services.xserver.displayManager.autoLogin.enable = true;
-  services.xserver.displayManager.autoLogin.user = "aster";
+  services.displayManager.autoLogin.enable = true;
+  services.displayManager.autoLogin.user = "aster";
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -99,6 +99,9 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nix.settings.auto-optimise-store = true;
 
+  # enable flatpak
+  services.flatpak.enable = true;
+  
   # Auto system update
   system.autoUpgrade = {
       enable = true;
@@ -151,9 +154,13 @@
   # Dbus
   services.dbus.enable = true;
 
-  # XDG (I'm not sure what this is)
+  # XDG portals (I'm not sure what this is)
   xdg.portal.enable = true;
+  xdg.portal.xdgOpenUsePortal = true;
+  xdg.portal.wlr.enable = true;
+  xdg.portal.lxqt.enable = true;
 
+  
   security.polkit.enable = true;
   systemd = {
     user.services.polkit-gnome-authentication-agent-1 = {

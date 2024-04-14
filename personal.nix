@@ -8,6 +8,7 @@
     ./personal/env.nix
     ./personal/keymap.nix # workman. change it.
     ./personal/packages.nix
+    ./personal/git.nix
     ./personal/git-alias.nix
     ./personal/shell-alias.nix
     ./personal/fonts.nix # some ja and en fonts
@@ -20,7 +21,6 @@
   environment.variables = {
     EDITOR = "nvim";
     BROWSER = "firefox";
-    QT_QPA_PLATFORM = "xcb";
   };
 
   # QT styles
@@ -51,6 +51,6 @@
   programs.steam.enable = true;
 
   # Enable automatic login for the user.
-  services.xserver.displayManager.autoLogin.enable = true;
-  services.xserver.displayManager.autoLogin.user = "aster";
+  services.displayManager.autoLogin.enable = true;
+  services.displayManager.autoLogin.user = "aster";
 }

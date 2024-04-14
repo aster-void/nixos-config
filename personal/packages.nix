@@ -1,5 +1,8 @@
 {pkgs, ...} :
 {
+  imports = [
+    ./obs.nix
+  ];
   users.users.aster.packages = with pkgs; [
     # CLI Tools
     screenfetch

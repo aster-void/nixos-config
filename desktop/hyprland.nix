@@ -5,16 +5,13 @@
 { config, pkgs, ... }:
 
 {
-  imports = [
-    ./sddm.nix
-  ];
   services.xserver.enable = true;
   # launch Hyprland on startup
   services.xserver.displayManager.setupCommands = ''
-    Hyprland
+    # Hyprland
   '';
 
-  services.xserver.displayManager.defaultSession = "hyprland";
+  services.displayManager.defaultSession = "hyprland";
 
   programs.hyprland = {
     # Install the packages from nixpkgs
@@ -24,7 +21,10 @@
       enable = true;
     };
   };
-
+  environment.variables = {
+    QT_QPA_PLATFORM = "wayland";
+  };
+    
   environment.systemPackages = with pkgs; [
     waybar
     wofi

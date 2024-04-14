@@ -7,10 +7,17 @@
 
     # I don't know what these are
     qt5.full
+    libsForQt5.qt5.qtwayland
     qt6.qtwayland
+    qt6.qt5compat
     gtk3
     gtk4
 
+    xwayland
+
+    # audio drivers
+    # pulseaudioFull
+    
     # IME modules
     fcitx5-mozc
 
@@ -24,6 +31,7 @@
     imagemagick # image editor i guess?
 
     # dev
+    stow
     git
     xsel
     zoxide

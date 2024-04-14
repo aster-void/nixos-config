@@ -14,5 +14,7 @@
     rbs = "sudo nixos-rebuild switch";
     rbb = "sudo nixos-rebuild boot";
     rbbb = "sudo nixos-rebuild boot && reboot";
+
+    zoom-us = "flatpak run us.zoom.Zoom";
   };
 }

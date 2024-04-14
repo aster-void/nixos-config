@@ -1,6 +1,6 @@
 { pkgs, ...} : {
   fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "CodeNewRoman" ]; })
+    (nerdfonts.override { fonts = [ "CodeNewRoman" "DejaVuSansMono" "Meslo" "Noto" ]; })
     noto-fonts
     noto-fonts-cjk
     noto-fonts-emoji
