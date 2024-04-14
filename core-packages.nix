@@ -30,8 +30,11 @@
     fish
     git
     xsel
+
+    # fetch
     screenfetch
     neofetch
+    cpufetch
 
     # code editors
     vim

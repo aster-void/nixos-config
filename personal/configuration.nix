@@ -133,9 +133,8 @@
     description = "aster";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
+      git
       firefox
-      screenfetch
-      neofetch
     ];
   };
 

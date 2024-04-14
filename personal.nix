@@ -15,7 +15,8 @@
     ./personal/ime.nix # fcitx5 + mozc
     ./personal/locale.nix # English + Asia/Tokyo
     ./personal/aagl.nix # when will hoyov officially support linux?
-    ./passwd.nix # comment out this line if you don't need auto login
+    ./password.nix
+    ./wifi.nix
   ];
 
   environment.variables = {
@@ -28,6 +29,11 @@
     style = "bb10dark";
     platformTheme = "kde";
   }; */
+
+
+  # Enable automatic login for the user.
+  services.displayManager.autoLogin.enable = true;
+  services.displayManager.autoLogin.user = "aster";
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.aster = {
@@ -49,8 +55,4 @@
   };
 
   programs.steam.enable = true;
-
-  # Enable automatic login for the user.
-  services.displayManager.autoLogin.enable = true;
-  services.displayManager.autoLogin.user = "aster";
 }
