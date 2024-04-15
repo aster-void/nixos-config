@@ -3,12 +3,13 @@
 ## How to Use
 
 1. install NixOS.
-2(optional). connect to the Internet via nmtui. (can be skipped if you use an ethernet)
-3. run nix-shell -p git
-4. clone this repo
-5. run ./init.sh , this will do most of the boilerplate works.
-6. rename the user in personal/packages.nix
+2. connect to the Internet via nmtui. (can be skipped if you use an ethernet)
+3. run nix-shell -p git helix # or your favorite cui editor
+4. clone this repo via https
+5. run ./init.sh . this will do most of the boilerplate works.
+6. rename the user in ./personal/ (helix global search might help)
 7. look inside personal.nix and follow the instructions there (may be more than one).
+
 (below are optional)
 8. initialize zoxide by running zoxide init $SHELLNAME >> /home/$USER/.bashrc
 
