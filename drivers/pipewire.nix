@@ -7,7 +7,7 @@ services.pipewire = {
   alsa.support32Bit = true;
   pulse.enable = true;
   # If you want to use JACK applications, uncomment this
-  # jack.enable = true;
+  jack.enable = true;
 };
 services.pipewire.wireplumber.configPackages = [
 	(pkgs.writeTextDir "share/wireplumber/bluetooth.lua.d/51-bluez-config.lua" ''

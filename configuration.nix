@@ -21,8 +21,18 @@
     ];
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  # boot.loader.systemd-boot.enable = true;
+  # enable grub
+  boot.loader = {
+  efi = {
+    canTouchEfiVariables = true;
+  };
+  grub = {
+     enable = true;
+     efiSupport = true;
+     device = "/dev/sda";
+  };
+};
 
   # Swappiness
   boot.kernel.sysctl = { "vm.swappiness" = 10;};
