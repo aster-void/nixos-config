@@ -7,6 +7,7 @@
     gs = "git status";
     ga = "git add -A";
     gc = "git commit -m ";
+    gp = "git push";
 
     nixman = "cd /etc/nixos/; sudo -s;";
     hman = "cd ~/.config/home-manager; ls";
