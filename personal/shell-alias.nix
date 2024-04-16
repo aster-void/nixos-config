@@ -3,7 +3,10 @@
     n = "nvim";
     h = "hx";
 
+    gf = "git fetch --prune && git pull";
     gs = "git status";
+    ga = "git add -A";
+    gc = "git commit -m ";
 
     nixman = "cd /etc/nixos/; sudo -s;";
     hman = "cd ~/.config/home-manager; ls";
@@ -14,6 +17,7 @@
     rbs = "sudo nixos-rebuild switch";
     rbb = "sudo nixos-rebuild boot";
     rbbb = "sudo nixos-rebuild boot && reboot";
+    rbt = "sudo nixos-rebuild test";
 
     zoom-us = "flatpak run us.zoom.Zoom";
   };
