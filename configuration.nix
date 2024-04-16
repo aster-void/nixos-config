@@ -17,6 +17,7 @@
       ./core-packages.nix
       ./system-packages.nix
       ./nvim/main.nix
+      ./drivers/pipewire.nix
     ];
 
   # Bootloader.
@@ -69,8 +70,8 @@
   services.printing.enable = true;
   services.printing.drivers = [pkgs.cnijfilter2];
 
-  # Enable sound with pipewire.
-  sound.enable = true;
+  # Enable sound with pipewire. (defined in ./drivers/pipewire.nix)
+  /* sound.enable = true;
   hardware.pulseaudio.enable = false;
   hardware.pulseaudio.support32Bit = true;
   security.rtkit.enable = true;
@@ -84,7 +85,7 @@
 
     # use the example session manager (no others are packaged yet so this is enabled by default,
     # no need to redefine it in your config for now)
-  };
+  }; */
 
   # Enable touchpad support (enabled default in most desktopManager).
   services.xserver.libinput.enable = true;
