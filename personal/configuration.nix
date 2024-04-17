@@ -132,10 +132,6 @@
     isNormalUser = true;
     description = "aster";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      git
-      firefox
-    ];
   };
 
   programs.steam.enable = true;

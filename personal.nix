@@ -21,7 +21,7 @@
 
   environment.variables = {
     EDITOR = "nvim";
-    BROWSER = "firefox";
+    # BROWSER = "firefox";
   };
 
   # QT styles
@@ -54,5 +54,5 @@
     };
   };
 
-  programs.steam.enable = true;
+  # programs.steam.enable = true; # ... not free
 }

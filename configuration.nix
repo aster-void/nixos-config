@@ -14,7 +14,6 @@
       # ./data/home-manager.nix
       #<home-manager/nixos>
       #./samba.nix
-      ./core-packages.nix
       ./system-packages.nix
       ./nvim/main.nix
       ./drivers/pipewire.nix
@@ -32,6 +31,7 @@
      efiSupport = true;
      device = "/dev/sda";
   };
+  timeout = 10;
 };
 
   # Swappiness
@@ -78,7 +78,7 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
-  services.printing.drivers = [pkgs.cnijfilter2];
+  # services.printing.drivers = [pkgs.cnijfilter2]; # ... unfree
 
   # Enable sound with pipewire. (defined in ./drivers/pipewire.nix)
   /* sound.enable = true;
@@ -207,6 +207,6 @@
   system.stateVersion = "23.11"; # Did you read the comment?
 
  nixpkgs.config.permittedInsecurePackages = [
-	"openssl-1.1.1w" "electron-19.1.9"
+	"openssl-1.1.1w" # "electron-19.1.9"
 ];
 }
