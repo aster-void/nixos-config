@@ -91,8 +91,9 @@
     enable = true;
     xwayland.enable = true;
     # hint electron apps to use wayland
+    # this makes electron apps to not use fcitx5 for some reason???
+    # environment.sessionVariables.NIXOS_OZONE_WL = "1";
   };
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   # Configure keymap in X11
   services.xserver = {
