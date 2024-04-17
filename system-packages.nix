@@ -54,6 +54,10 @@
     xsel
     zoxide
 
+    # emulator
+    qemu
+    quickemu # how are they different?
+
     # code editors (if you like gui editors, add it to user's package)
     vim
     # neovim # use nvim/* instead;

@@ -9,6 +9,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./hardware-dep.nix
       ./personal.nix
       ./desktop.nix
       # ./data/home-manager.nix
@@ -29,7 +30,6 @@
   grub = {
      enable = true;
      efiSupport = true;
-     device = "/dev/sda";
   };
   timeout = 10;
 };

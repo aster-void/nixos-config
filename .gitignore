@@ -3,6 +3,7 @@ result
 
 # client-dependent
 hardware-configuration.nix
+hardware-dep.nix
 
 # secret files
 wifi.nix
