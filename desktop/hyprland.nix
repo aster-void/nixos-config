@@ -27,7 +27,6 @@
   };
     
   environment.systemPackages = with pkgs; [
-    waybar
     wofi
     hyprland
     hyprland-protocols

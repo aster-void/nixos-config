@@ -40,7 +40,6 @@
     sddm-kcm
     swaybg
     sxhkd
-    waybar
     wdisplays
     wofi
     xfce.thunar
