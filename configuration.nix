@@ -30,6 +30,7 @@
   grub = {
      enable = true;
      efiSupport = true;
+     device = "nodev";
   };
   timeout = 10;
 };

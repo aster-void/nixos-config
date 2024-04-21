@@ -1,12 +1,5 @@
 {
-  programs.git = {
-    enable = true;
-    config = {
-      user = {
-        name = "aster";
-        email = "137767097+aster-void@users.noreply.github.com";
-      };
-      alias = {
+  programs.git.config.alias = {
         a = "add";
 	aa = "add -A";
         c = "commit";
@@ -25,7 +18,4 @@
 	amend = "commit --amend --no-edit";
 	recommit = "commit --amend";
       };
-      core.editor = "vim";
-    };
-  };
 }

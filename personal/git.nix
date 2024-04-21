@@ -1,3 +1,6 @@
 {
-  programs.git.config.init.defaultBranch = "main";
+  programs.git.config = {
+    core.editor = "vim";
+    init.defaultBranch = "main";
+  };
 }
