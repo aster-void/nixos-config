@@ -75,6 +75,13 @@
     # Language Servers
     rustfmt
     gopls
+    nixpkgs-fmt
+    typescript
+    nodePackages_latest.typescript-language-server
+    tailwindcss-language-server
+    vscode-langservers-extracted # HTML/CSS/JSON/ESLint all in one
+    taplo # a LS for TOML
+    marksman
 
     # others
     curl
