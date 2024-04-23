@@ -74,6 +74,7 @@
 
     # Language Servers
     rustfmt
+    rust-analyzer
     gopls
     nixpkgs-fmt
     typescript

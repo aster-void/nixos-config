@@ -2,7 +2,9 @@
   environment.shellAliases = {
     n = "nvim";
     h = "hx";
+    "h." = "hx .";
 
+    gb = "git branch";
     gf = "git fetch --prune && git pull";
     gs = "git status";
     ga = "git add -A";
