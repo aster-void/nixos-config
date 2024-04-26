@@ -77,6 +77,7 @@
     rust-analyzer
     gopls
     nixpkgs-fmt
+    nixd
     typescript
     nodePackages_latest.typescript-language-server
     tailwindcss-language-server
