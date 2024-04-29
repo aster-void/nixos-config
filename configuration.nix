@@ -7,7 +7,8 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./hardware-dep.nix
       ./personal.nix
@@ -24,22 +25,22 @@
   # boot.loader.systemd-boot.enable = true;
   # enable grub
   boot.loader = {
-  efi = {
-    canTouchEfiVariables = true;
-    efiSysMountPoint = "/boot";
+    efi = {
+      canTouchEfiVariables = true;
+      efiSysMountPoint = "/boot";
+    };
+    grub = {
+      enable = true;
+      efiSupport = true;
+      # device = "nodev"; # ... define in hardware-dep.nix
+      useOSProber = true;
+      default = "saved";
+    };
+    timeout = 10;
   };
-  grub = {
-     enable = true;
-     efiSupport = true;
-     # device = "nodev"; # ... define in hardware-dep.nix
-     useOSProber = true;
-     default = "saved";
-  };
-  timeout = 10;
-};
 
   # Swappiness
-  boot.kernel.sysctl = { "vm.swappiness" = 10;};
+  boot.kernel.sysctl = { "vm.swappiness" = 10; };
 
   # Kernel
   boot.kernelPackages = pkgs.linuxPackages_latest;
@@ -68,15 +69,15 @@
   # compat + gui libs (i'm not familiar)
   qt.enable = true;
   programs.xwayland.enable = true;
-    
+
   # https://mynixos.com/options/services.xserver.desktopManager
-  
+
   #https://mynixos.com/options/services.xserver.windowManager
 
   # Select internationalisation properties.
   console = {
-    packages=[ pkgs.terminus_font ];
-    font="${pkgs.terminus_font}/share/consolefonts/ter-i22b.psf.gz";
+    packages = [ pkgs.terminus_font ];
+    font = "${pkgs.terminus_font}/share/consolefonts/ter-i22b.psf.gz";
     useXkbConfig = true; # use xkbOptions in tty.
   };
 
@@ -86,10 +87,10 @@
 
   # Enable sound with pipewire. (defined in ./drivers/pipewire.nix)
   /* sound.enable = true;
-  hardware.pulseaudio.enable = false;
-  hardware.pulseaudio.support32Bit = true;
-  security.rtkit.enable = true;
-  services.pipewire = {
+    hardware.pulseaudio.enable = false;
+    hardware.pulseaudio.support32Bit = true;
+    security.rtkit.enable = true;
+    services.pipewire = {
     enable = true;
     alsa.enable = true;
     alsa.support32Bit = true;
@@ -102,21 +103,21 @@
   }; */
 
   # Enable touchpad support (enabled default in most desktopManager).
-  services.xserver.libinput.enable = true;
+  services.libinput.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.nvidia.acceptLicense = true;
-  
+
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nix.settings.auto-optimise-store = true;
 
   # enable flatpak
   services.flatpak.enable = true;
-  
+
   # Auto system update
   system.autoUpgrade = {
-      enable = true;
+    enable = true;
   };
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -156,7 +157,7 @@
   };
 
   programs.bash = {
-	enableCompletion = true;
+    enableCompletion = true;
   };
 
   services.xserver.displayManager.setupCommands = ''
@@ -172,7 +173,7 @@
   xdg.portal.wlr.enable = true;
   xdg.portal.lxqt.enable = true;
 
-  
+
   security.polkit.enable = true;
   systemd = {
     user.services.polkit-gnome-authentication-agent-1 = {
@@ -210,7 +211,7 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.11"; # Did you read the comment?
 
- nixpkgs.config.permittedInsecurePackages = [
-	"openssl-1.1.1w" # "electron-19.1.9"
-];
+  nixpkgs.config.permittedInsecurePackages = [
+    "openssl-1.1.1w" # "electron-19.1.9"
+  ];
 }

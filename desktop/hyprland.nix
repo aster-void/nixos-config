@@ -22,10 +22,10 @@
     };
   };
   environment.variables = {
-    QT_QPA_PLATFORM = "wayland";
+    # QT_QPA_PLATFORM = "wayland";
     # ELECTRON_OZONE_PLATFORM_HINT = "wayland";
   };
-    
+
   environment.systemPackages = with pkgs; [
     wofi
     hyprland
