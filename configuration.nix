@@ -32,7 +32,8 @@
      enable = true;
      efiSupport = true;
      # device = "nodev"; # ... define in hardware-dep.nix
-    useOSProber = true;
+     useOSProber = true;
+     default = "saved";
   };
   timeout = 10;
 };
