@@ -168,11 +168,15 @@
   services.dbus.enable = true;
 
   # XDG portals (I'm not sure what this is)
-  xdg.portal.enable = true;
-  xdg.portal.xdgOpenUsePortal = true;
-  xdg.portal.wlr.enable = true;
-  xdg.portal.lxqt.enable = true;
-
+  xdg.portal = {
+    enable = true;
+    xdgOpenUsePortal = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+      xdg-desktop-portal-wlr
+    ];
+    # wlr.enable = true;
+  };
 
   security.polkit.enable = true;
   systemd = {
