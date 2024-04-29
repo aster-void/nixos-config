@@ -1,4 +1,4 @@
-{pkgs, ...} :
+{ pkgs, ... }:
 {
   imports = [
     ./obs.nix
@@ -8,7 +8,7 @@
     screenfetch
     neofetch
     cmus # music player
-    cava    
+    cava
     # Connect to other people
     slack
     zoom-us

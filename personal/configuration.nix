@@ -2,11 +2,12 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, lib,  pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       ./hardware-configuration.nix
       # ./nvim/configuration.nix # i'll write this later
       ./fonts.nix
@@ -31,7 +32,7 @@
 
   # nixpkgs
   nixpkgs.config.allowUnfree = true;
- 
+
   # Set your time zone.
   time.timeZone = "Asia/Tokyo";
 
@@ -49,7 +50,7 @@
     LC_TELEPHONE = "en_US.UTF-8";
     LC_TIME = "en_US.UTF-8";
   };
-  
+
   # IMEs
   i18n.inputMethod = {
     enabled = "fcitx5";
@@ -173,7 +174,7 @@
     wget
     ripgrep
   ];
- 
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;

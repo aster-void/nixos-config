@@ -6,17 +6,17 @@
 
 {
   environment.sessionVariables = rec {
-    XDG_CACHE_HOME  = "$HOME/.cache";
+    XDG_CACHE_HOME = "$HOME/.cache";
     XDG_CONFIG_HOME = "$HOME/.config";
-    XDG_DATA_HOME   = "$HOME/.local/share";
-    XDG_STATE_HOME  = "$HOME/.local/state";
+    XDG_DATA_HOME = "$HOME/.local/share";
+    XDG_STATE_HOME = "$HOME/.local/state";
 
-    WLR_NO_HARDWARE_CURSORS="1"; # invisible cursor fix
+    WLR_NO_HARDWARE_CURSORS = "1"; # invisible cursor fix
 
     # Not officially in the specification
-    XDG_BIN_HOME    = "$HOME/.bin";
-    PATH = [ 
+    XDG_BIN_HOME = "$HOME/.bin";
+    PATH = [
       "${XDG_BIN_HOME}"
     ];
-  };	
+  };
 }

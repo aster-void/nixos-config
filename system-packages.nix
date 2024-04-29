@@ -30,13 +30,13 @@
 
     # audio drivers
     # pulseaudioFull
-    
+
     # IME modules
     fcitx5-mozc
 
     # gnome-only
     pkgs.gnomeExtensions.kimpanel
-    
+
 
     # utils
     unzip

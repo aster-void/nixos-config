@@ -1,9 +1,9 @@
-{pkgs, ...}: 
+{ pkgs, ... }:
 {
   imports = [
     # paste this into hardware-configuration.nix if you use nvidia cards.
     #./drivers/nvidia.nix
-   
+
     # personal preferences. this works out of the box after running ./init.sh .
     ./personal/env.nix
     ./personal/keymap.nix # workman. change it.
@@ -15,6 +15,7 @@
     ./personal/ime.nix # fcitx5 + mozc
     ./personal/locale.nix # English + Asia/Tokyo
     ./personal/aagl.nix # when will hoyov officially support linux?
+    # ./personal/zoxide.nix # ... not working
     ./password.nix
     ./wifi.nix
   ];

@@ -5,11 +5,11 @@
 { config, pkgs, ... }:
 
 {
-	services.samba-wsdd = {
-	  # make shares visible for windows 10 clients
-	  enable = true;
-	  openFirewall = true;
-	};
+  services.samba-wsdd = {
+    # make shares visible for windows 10 clients
+    enable = true;
+    openFirewall = true;
+  };
 
   services.samba = {
     enable = true;
