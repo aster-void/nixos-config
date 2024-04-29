@@ -10,4 +10,10 @@
     # ./desktop/plasma6.nix
     ./desktop/hyprland.nix
   ];
+
+  services.displayManager.defaultSession = "hyprland";
+
+  services.xserver.displayManager.setupCommands = ''
+    # Hyprland
+  '';
 }
