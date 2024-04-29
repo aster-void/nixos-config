@@ -1,13 +1,10 @@
 #!/usr/bin/env bash
 
-# nix channels
-
 # nix-channel --remove nixos
 nix-channel --add https://nixos.org/channels/nixos-unstable nixos
 nix-channel --add https://nixos.org/channels/nixpkgs-unstable nixpkgs
 
-nix-channel --update
-
+./update.sh
 
 # copying template files
 if [ ! -f password.nix ]; then
