@@ -31,7 +31,8 @@
   grub = {
      enable = true;
      efiSupport = true;
-     device = "nodev";
+     # device = "nodev"; # ... define in hardware-dep.nix
+    useOSProber = true;
   };
   timeout = 10;
 };
