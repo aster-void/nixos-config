@@ -3,7 +3,7 @@
   imports = [
     # display manager
     display-manager/sddm.nix
-    display-manager/gdm.nix
+    # display-manager/gdm.nix
 
     # desktop / window manager
     # ./desktop/gnome.nix # unchecked

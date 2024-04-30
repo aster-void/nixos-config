@@ -12,7 +12,7 @@
     gp = "git push";
 
     nixman = "cd /etc/nixos/; sudo -s;";
-    hman = "cd ~/.config/home-manager; ls";
+    hs = "home-manager switch";
     hypr = "cd ~/.config/hypr/; ls";
     home = "home-manager";
     nixgc = "nix-collect-garbage";
