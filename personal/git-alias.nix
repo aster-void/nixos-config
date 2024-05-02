@@ -11,7 +11,7 @@
     bd = "branch -d";
     s = "status";
     f = "fetch --prune";
-    u = "push --set-upstram origin";
+    u = "push --set-upstream";
     graph = "log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short";
     unstage = "reset HEAD --";
     last = "log -1 HEAD";
