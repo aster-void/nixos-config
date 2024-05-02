@@ -10,6 +10,7 @@
     ga = "git add -A";
     gc = "git commit -m ";
     gp = "git push";
+    gl = "git pull";
 
     nixman = "cd /etc/nixos/; sudo -s;";
     hs = "home-manager switch";
