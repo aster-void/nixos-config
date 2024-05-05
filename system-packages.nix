@@ -17,6 +17,9 @@
     # dev
     git
     xsel
+    curl
+    netcat-gnu
+    openssl
 
     # I don't know what these are
     qt5.full
@@ -86,7 +89,6 @@
     marksman
 
     # others
-    curl
     wget
     ripgrep
     gettext
