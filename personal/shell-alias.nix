@@ -18,6 +18,8 @@
     gp = "git push";
     gl = "git pull";
 
+    dush = "du -sh";
+
     nixman = "cd /etc/nixos/; sudo -s;";
     hs = "home-manager switch";
     hypr = "cd ~/.config/hypr/; ls";
