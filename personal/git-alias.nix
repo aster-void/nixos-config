@@ -12,6 +12,9 @@
     s = "status";
     f = "fetch --prune";
     u = "push --set-upstream origin HEAD";
+    log = "log --oneline";
+    logv = "log";
+    sync = "pull --rebase; git push";
     graph = "log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short";
     unstage = "reset HEAD --";
     last = "log -1 HEAD";
