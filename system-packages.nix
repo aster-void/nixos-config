@@ -16,6 +16,7 @@
 
     # dev
     git
+    lazygit
     xsel
     curl
     netcat-gnu
@@ -37,15 +38,11 @@
     # IME modules
     fcitx5-mozc
 
-    # gnome-only
-    pkgs.gnomeExtensions.kimpanel
-
-
     # utils
     unzip
     vlc
 
-    # core functionality
+    # utils
     dolphin # gui directory preview, necesarry for looking for wallpaper
     feh # image viewer that is too simple
     gwenview # slightly better (I wish)
