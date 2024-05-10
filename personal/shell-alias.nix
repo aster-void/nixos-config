@@ -19,6 +19,8 @@
     gl = "git pull";
     cg = "ch $(git root)";
 
+    lg = "lazygit";
+
     sizeof = "du -sh";
     dush = "du -sh";
 
