@@ -10,6 +10,7 @@
     ba = "branch -a";
     bd = "branch -d";
     s = "status";
+    sv = "status -v";
     f = "fetch --prune";
     u = "push --set-upstream origin HEAD";
     log = "log --oneline";
@@ -17,6 +18,7 @@
     sync = "pull --rebase; git push";
     graph = "log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short";
     unstage = "reset HEAD --";
+    root = "rev-parse --show-toplevel";
     last = "log -1 HEAD";
     discard = "reset --hard HEAD";
     uncommit = "reset HEAD~";

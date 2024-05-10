@@ -17,7 +17,9 @@
     gc = "git commit -m ";
     gp = "git push";
     gl = "git pull";
+    cg = "ch $(git root)";
 
+    sizeof = "du -sh";
     dush = "du -sh";
 
     nixman = "cd /etc/nixos/; sudo -s;";
