@@ -17,7 +17,7 @@
     gc = "git commit -m ";
     gp = "git push";
     gl = "git pull";
-    cg = "ch $(git root)";
+    cg = "cd $(git root)";
 
     lg = "lazygit";
 

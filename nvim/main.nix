@@ -1,12 +1,14 @@
 { pkgs, ... }:
 {
-  imports = [
+  /* 
+    imports = [
     ./theme.nix
-  ];
-  programs.neovim = {
+    ];
+    programs.neovim = {
     enable = true;
     defaultEditor = true;
     # plugins = with pkgs.vimPlugins; [
     # ];
-  };
+    };
+  */
 }

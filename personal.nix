@@ -1,28 +1,21 @@
 { pkgs, ... }:
 {
   imports = [
-    # paste this into hardware-configuration.nix if you use nvidia cards.
+    # paste this into hardware-dep.nix if you use nvidia cards.
     #./drivers/nvidia.nix
 
-    # personal preferences. this works out of the box after running ./init.sh .
     ./personal/env.nix
     ./personal/keymap.nix # workman. change it.
-    ./personal/packages.nix
-    ./personal/git.nix
-    ./personal/git-alias.nix
     ./personal/shell-alias.nix
     ./personal/fonts.nix # some ja and en fonts
-    ./personal/ime.nix # fcitx5 + mozc
     ./personal/locale.nix # English + Asia/Tokyo
-    ./personal/aagl.nix # when will hoyov officially support linux?
-    # ./personal/zoxide.nix # ... not working
     ./password.nix
-    ./wifi.nix
+    # ./wifi.nix
   ];
 
   environment.variables = {
-    EDITOR = "nvim";
-    # BROWSER = "firefox";
+    EDITOR = "helix";
+    BROWSER = "firefox";
   };
 
   # QT styles
@@ -30,7 +23,6 @@
     style = "bb10dark";
     platformTheme = "kde";
   }; */
-
 
   # Enable automatic login for the user.
   services.displayManager.autoLogin.enable = true;
@@ -40,8 +32,14 @@
   users.users.aster = {
     isNormalUser = true;
     description = "aster";
-    extraGroups = [ "mlocate" "networkmanager" "wheel" "samba" "vboxusers" ];
-    # refer ./passwd.nix for password.
+    extraGroups = [
+      "mlocate"
+      "networkmanager"
+      "wheel"
+      # "samba"
+      # "vboxusers"
+    ];
+    # refer ./password.nix for password.
     # refer personal/packages.nix for packages.
   };
 
@@ -52,8 +50,10 @@
         name = "aster";
         email = "137767097+aster-void@users.noreply.github.com";
       };
+      core.editor = "helix";
+      init.defaultBranch = "main";
     };
   };
 
-  # programs.steam.enable = true; # ... not free
+  programs.steam.enable = true;
 }

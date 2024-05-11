@@ -12,11 +12,11 @@
       ./hardware-configuration.nix
       ./hardware-dep.nix
       ./personal.nix
+      ./packages.nix
       ./desktop.nix
       # ./data/home-manager.nix
       #<home-manager/nixos>
       #./samba.nix
-      ./system-packages.nix
       ./nvim/main.nix
       ./drivers/pipewire.nix
     ];
