@@ -5,7 +5,9 @@
     c = "commit";
     cm = "commit -m";
     co = "checkout";
+    cob = "checkout -b";
     sw = "switch";
+    swc = "switch -c";
     b = "branch";
     ba = "branch -a";
     bd = "branch -d";

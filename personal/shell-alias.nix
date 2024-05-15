@@ -11,10 +11,13 @@
     "h." = "hx .";
 
     gb = "git branch";
+    gba = "git branch -a";
     gf = "git fetch --prune && git pull";
-    gs = "git status";
+    gs = "git status -s";
+    gsv = "git status -v";
+    gsr = "git status";
     ga = "git add -A";
-    gc = "git commit -m ";
+    gc = "git commit -m";
     gp = "git push";
     gl = "git pull";
     cg = "cd $(git root)";
