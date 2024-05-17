@@ -51,6 +51,7 @@
 
     # cli utils
     xsel
+    gnumake
     bat
     stow
     zoxide

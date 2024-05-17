@@ -28,7 +28,7 @@
   services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = "aster";
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
+  # Define a user account.
   users.users.aster = {
     isNormalUser = true;
     description = "aster";
@@ -52,6 +52,7 @@
       };
       core.editor = "helix";
       init.defaultBranch = "main";
+      pull.rebase = "true";
     };
   };
 

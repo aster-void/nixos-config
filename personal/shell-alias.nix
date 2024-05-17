@@ -10,8 +10,11 @@
     h = "hx";
     "h." = "hx .";
 
+    g = "git";
     gb = "git branch";
     gba = "git branch -a";
+    gco = "git checkout";
+    gsw = "git switch";
     gf = "git fetch --prune && git pull";
     gs = "git status -s";
     gsv = "git status -v";
@@ -19,6 +22,7 @@
     ga = "git add -A";
     gc = "git commit -m";
     gp = "git push";
+    gu = "git push --set-upstream origin HEAD";
     gl = "git pull";
     cg = "cd $(git root)";
 
