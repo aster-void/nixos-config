@@ -50,7 +50,7 @@
         name = "aster";
         email = "137767097+aster-void@users.noreply.github.com";
       };
-      core.editor = "helix";
+      core.editor = "hx";
       init.defaultBranch = "main";
       pull.rebase = "true";
     };
