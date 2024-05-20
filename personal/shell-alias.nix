@@ -14,6 +14,7 @@
     gb = "git branch";
     gba = "git branch -a";
     gco = "git checkout";
+    gcob = "git checkout -b";
     gsw = "git switch";
     gf = "git fetch --prune && git pull";
     gs = "git status -s";
