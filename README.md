@@ -11,7 +11,7 @@
 7. look inside personal.nix and follow the instructions there (may be more than one).
 
 (below are optional)
-8. initialize zoxide by running zoxide init $SHELLNAME >> /home/$USER/.bashrc
+8. initialize zoxide by running zoxide init $SHELLNAME >> /home/$USER/.${SHELL}rc
 
 ## Things to do after
 
