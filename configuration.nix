@@ -117,7 +117,7 @@
 
   # Auto system update
   system.autoUpgrade = {
-    enable = true;
+    enable = false;
   };
 
   # Some programs need SUID wrappers, can be configured further or are
