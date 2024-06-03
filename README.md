@@ -15,6 +15,9 @@
 
 ## Things to do after
 
+- clone .dotfiles and decorations (private for copyright reason, use wallpaper-renamer repo if you are not me).
+- configure fcitx5
+
 ## Forked From
 
 this repo is originally copied from https://github.com/erikdubois/nixos-configurations/
