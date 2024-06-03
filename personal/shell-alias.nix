@@ -33,6 +33,8 @@
     sizeof = "du -sh";
     dush = "du -sh";
 
+    sl = "ls";
+
     nixman = "cd /etc/nixos/; sudo -s;";
     hs = "home-manager switch";
     hypr = "cd ~/.config/hypr/; ls";
