@@ -37,7 +37,6 @@
     # shell
     alacritty
     kitty
-    # yakuake
     bash
     fish
     zsh
