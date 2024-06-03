@@ -22,6 +22,7 @@
     wofi
     hyprland
     hyprland-protocols
+    hyprcursor
     hyprpaper
     hypridle
     hyprlock
