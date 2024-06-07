@@ -46,6 +46,6 @@
     rbbb = "sudo nixos-rebuild boot && reboot";
     rbt = "sudo nixos-rebuild test";
 
-    zoom-us = "flatpak run us.zoom.Zoom";
+    # zoom-us = "flatpak run us.zoom.Zoom";
   };
 }
