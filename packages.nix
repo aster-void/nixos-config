@@ -57,6 +57,7 @@
     most # view with less functions
     platinum-searcher # find but better
     ncdu # tui disk usage
+    fzf
 
     # network
     curl
