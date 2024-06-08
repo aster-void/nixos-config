@@ -7,8 +7,7 @@
 
     # desktop / window manager
     # ./desktop/gnome.nix # unchecked
-    # ./desktop/plasma5.nix # currently not working
-    # ./desktop/plasma6.nix
+    ./desktop/plasma6.nix
     ./desktop/hyprland.nix
   ];
 

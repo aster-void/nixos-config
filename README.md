@@ -15,7 +15,7 @@
 
 ## Things to do after
 
-- clone .dotfiles and decorations (private for copyright reason, use wallpaper-renamer repo if you are not me).
+- clone .dotfiles and decorations. (decorations is private for copyright reason)
 - configure fcitx5
 
 ## Forked From
