@@ -6,9 +6,13 @@
     # ./display-manager/gdm.nix
 
     # desktop / window manager
-    # ./desktop/gnome.nix # unchecked
-    # ./desktop/plasma5.nix # currently not working
-    # ./desktop/plasma6.nix
+    # ./desktop/gnome.nix # doesn't work
+    # uncommenting this fails on build, saying "conflicting pipewire and pusleaudio both turned on" or something
+
+    ./desktop/plasma6.nix
+    # keymap is not applied on plasma6.
+    # you need to manually edit it in the gui settings app.
+
     ./desktop/hyprland.nix
   ];
 

@@ -1,16 +1,14 @@
 { pkgs, ... }:
 {
-  imports = [
-    # paste this into hardware-dep.nix if you use nvidia cards.
-    #./drivers/nvidia.nix
+  # modify hardware-dep.nix and password.nix too.
 
+  imports = [
     ./personal/env.nix
     ./personal/keymap.nix # workman. change it.
     ./personal/shell-alias.nix
     ./personal/fonts.nix # some ja and en fonts
     ./personal/locale.nix # English + Asia/Tokyo
     ./password.nix
-    # ./wifi.nix
   ];
 
   environment.variables = {
@@ -25,8 +23,8 @@
   }; */
 
   # Enable automatic login for the user.
-  services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = "aster";
+  services.displayManager.autoLogin.enable = false;
 
   # Define a user account.
   users.users.aster = {
