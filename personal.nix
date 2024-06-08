@@ -23,8 +23,8 @@
   }; */
 
   # Enable automatic login for the user.
-  services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = "aster";
+  services.displayManager.autoLogin.enable = false;
 
   # Define a user account.
   users.users.aster = {

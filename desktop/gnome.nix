@@ -1,7 +1,8 @@
 { pkgs, ... }:
 {
-  services.xserver.desktopManager.gnome.enable = true;
-  environment.systemPackages = [
-    pkgs.gnome3.gnome-tweaks
-  ];
+  services.xserver = {
+    enable = true;
+    displayManager.gdm.enable = true;
+    desktopManager.gnome.enable = true;
+  };
 }
