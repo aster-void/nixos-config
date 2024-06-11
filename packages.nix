@@ -47,6 +47,7 @@
     # vcs
     git
     lazygit
+    gh
 
     # cli utils
     xsel
