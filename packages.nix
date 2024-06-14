@@ -48,6 +48,7 @@
     git
     lazygit
     gh
+    diff-so-fancy
 
     # cli utils
     xsel
