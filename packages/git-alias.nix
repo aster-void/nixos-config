@@ -21,7 +21,7 @@
     unstage = "reset HEAD --";
     root = "rev-parse --show-toplevel";
     last = "log -1 HEAD";
-    discard = "reset --hard HEAD";
+    nuke = "reset --hard HEAD";
     uncommit = "reset HEAD~";
     amend = "commit --amend --no-edit";
     recommit = "commit --amend";
