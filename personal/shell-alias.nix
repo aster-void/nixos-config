@@ -19,7 +19,7 @@
     gsw = "git switch";
     gf = "git fetch --prune && git pull";
     gs = "git status -s";
-    gsv = "git status -v";
+    gsv = "git status -v | diff-so-fancy | less --tabs=4 -RF";
     gsr = "git status";
     gd = "git diff --color-words | diff-so-fancy | less --tabs=4 -RF";
     ga = "git add -A";
