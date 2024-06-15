@@ -80,6 +80,7 @@
     ## file
     gwenview # file manager that actually works
     unzip # unzips files
+    ffmpeg # convert any music/video files
 
     ## image previewer
     feh # image viewer that is too simple
