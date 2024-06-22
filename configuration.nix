@@ -43,7 +43,8 @@
   boot.kernel.sysctl = { "vm.swappiness" = 10; };
 
   # Kernel
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  # boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxPackages_6_8;
 
   networking.hostName = "nixos"; # Define your hostname.
 
