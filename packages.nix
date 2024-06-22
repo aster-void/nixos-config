@@ -1,7 +1,6 @@
 { pkgs, ... }:
 {
   imports = [
-    ./packages/aagl.nix
     ./packages/git-alias.nix
     ./packages/ime.nix
     ./packages/obs.nix
