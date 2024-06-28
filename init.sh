@@ -6,3 +6,5 @@ nix-channel --add https://nixos.org/channels/nixos-unstable nixos
 
 ./update.sh
 ./copy-local.sh
+
+echo "REMEMBER TO CHANGE password.nix!"

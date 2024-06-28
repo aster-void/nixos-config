@@ -19,25 +19,8 @@
       #./samba.nix
       ./nvim/main.nix
       ./drivers/pipewire.nix
+      ./workaround.nix
     ];
-
-  # Bootloader.
-  # boot.loader.systemd-boot.enable = true;
-  # enable grub
-  boot.loader = {
-    efi = {
-      canTouchEfiVariables = true;
-      efiSysMountPoint = "/boot";
-    };
-    grub = {
-      enable = true;
-      efiSupport = true;
-      # device = "nodev"; # ... define in hardware-dep.nix
-      useOSProber = true;
-      default = "saved";
-    };
-    timeout = 10;
-  };
 
   # Swappiness
   boot.kernel.sysctl = { "vm.swappiness" = 10; };
@@ -213,7 +196,7 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "23.11"; # Did you read the comment?
+  system.stateVersion = "24.05"; # Did you read the comment?
 
   nixpkgs.config.permittedInsecurePackages = [
     "openssl-1.1.1w" # "electron-19.1.9"
