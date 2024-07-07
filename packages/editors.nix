@@ -2,6 +2,8 @@
 {
   environment.systemPackages = with pkgs;[
     # code editors
+
+    # Terminal editors
     vim
     helix
 
@@ -15,6 +17,9 @@
     ## Go
     gopls
 
+    ## Gleam
+    gleam
+
     ## Nix
     nixpkgs-fmt
     nixd
@@ -27,5 +32,6 @@
 
     ## Markdown
     marksman
+    markdown-oxide
   ];
 }
