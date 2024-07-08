@@ -132,6 +132,8 @@
     cargo
     go
     cmake # I'm not sure if this is a compiler
+    gleam
+    erlang
 
     # others
     wget

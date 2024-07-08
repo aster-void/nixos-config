@@ -17,9 +17,6 @@
     ## Go
     gopls
 
-    ## Gleam
-    gleam
-
     ## Nix
     nixpkgs-fmt
     nixd
