@@ -126,12 +126,14 @@
 
     # compilers + interpreters (if any)
     gcc
+    clang
+    cmake # I'm not sure if this is a compiler
     zig
     rustc
     rustup
     cargo
+    nodejs_22
     go
-    cmake # I'm not sure if this is a compiler
     gleam
     erlang
 
