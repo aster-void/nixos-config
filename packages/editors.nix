@@ -17,6 +17,9 @@
     ## Go
     gopls
 
+    # F#
+    fsautocomplete
+
     ## Nix
     nixpkgs-fmt
     nixd
