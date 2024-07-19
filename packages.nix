@@ -49,6 +49,9 @@
     gh
     diff-so-fancy
 
+    # dev
+    act
+
     # cli utils
     xsel
     gnumake
