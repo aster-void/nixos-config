@@ -16,6 +16,8 @@
 
     ## Go
     gopls
+    golangci-lint
+    golangci-lint-langserver
 
     ## Dockerfile, docker compose
     dockerfile-language-server-nodejs
