@@ -11,6 +11,7 @@
     b = "branch";
     ba = "branch -a";
     bd = "branch -d";
+    bda = "branch -d `git branch | grep -v \*`";
     s = "status";
     sv = "status -v";
     f = "fetch --prune";
