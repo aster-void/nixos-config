@@ -51,6 +51,7 @@
 
     # dev
     act
+    firefox-devedition
 
     # cli utils
     xsel
@@ -81,6 +82,9 @@
     gtk3
     gtk4
     xwayland
+
+    # daemon
+    dunst # notification daemon
 
     # utils
     ## file

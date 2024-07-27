@@ -140,7 +140,7 @@
   };
 
   programs.bash = {
-    enableCompletion = true;
+    completion.enable = true;
   };
 
   services.xserver.displayManager.setupCommands = ''
