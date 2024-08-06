@@ -35,6 +35,7 @@
     dush = "du -sh";
 
     sl = "ls";
+    claer = "clear";
 
     nixman = "cd /etc/nixos/; sudo -s;";
     hs = "home-manager switch";
