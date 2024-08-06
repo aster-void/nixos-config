@@ -17,7 +17,6 @@
       # ./data/home-manager.nix
       #<home-manager/nixos>
       #./samba.nix
-      ./nvim/main.nix
       ./drivers/pipewire.nix
       ./workaround.nix
     ];
