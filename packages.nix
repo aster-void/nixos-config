@@ -65,12 +65,12 @@
     ncdu # tui disk usage
     fzf
     postgresql
-    openssh
 
     # network
     curl
     wget
     netcat-gnu
+    openssh
     openssl
 
     # messaging (I dont use)
