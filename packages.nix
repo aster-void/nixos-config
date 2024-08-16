@@ -48,6 +48,7 @@
     lazygit
     gh
     diff-so-fancy
+    gitleaks
 
     # dev
     act
