@@ -64,6 +64,7 @@
     ncdu # tui disk usage
     fzf
     postgresql
+    openssh
 
     # network
     curl
