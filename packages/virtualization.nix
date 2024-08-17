@@ -10,6 +10,6 @@
   environment.defaultPackages = with pkgs; [
     # emulator
     qemu
-    quickemu # how are they different?
+    # quickemu # how are they different?
   ];
 }
