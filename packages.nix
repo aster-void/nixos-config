@@ -12,6 +12,7 @@
   users.users.aster.packages = with pkgs; [
     # CLI Tools
     btop
+    dstat
     screenfetch
     neofetch
     cpufetch
