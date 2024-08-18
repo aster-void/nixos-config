@@ -44,6 +44,10 @@
     zsh-completions
     zsh-syntax-highlighting
 
+    # shell prompt
+    starship
+    blesh
+
     # vcs
     git
     lazygit
@@ -143,6 +147,7 @@
     rustc
     rustup
     cargo
+    pkg-config
     nodejs_22
     go
     gleam
