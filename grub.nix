@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ ... }: {
   # Bootloader.
   # boot.loader.systemd-boot.enable = true;
   # enable grub
@@ -9,9 +9,12 @@
     };
     grub = {
       enable = true;
+      version = 2;
+
       efiSupport = true;
-      # device = "nodev"; # ... define in hardware-dep.nix
       useOSProber = true;
+      # device = "nodev"; # ... example. define in hardware-dep.nix
+
       default = "saved";
     };
     timeout = 10;
