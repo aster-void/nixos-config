@@ -40,6 +40,7 @@
     bash
     fish
     zsh
+    nushell
     bash-completion
     zsh-completions
     zsh-syntax-highlighting
