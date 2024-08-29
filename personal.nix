@@ -8,7 +8,7 @@
     ./personal/shell-alias.nix
     ./personal/fonts.nix # some ja and en fonts
     ./personal/locale.nix # English + Asia/Tokyo
-    ./password.nix
+    ./local/password.nix
   ];
 
   environment.variables = {

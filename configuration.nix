@@ -3,22 +3,20 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 # https://releases.nixos.org/nixos/unstable/
 
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   imports =
     [
       # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ./hardware-dep.nix
+      # use nixos-generate-config to generate
+      ./local/hardware-configuration.nix
+      ./local/hardware-dep.nix
+
       ./personal.nix
       ./packages.nix
       ./desktop.nix
-      # ./data/home-manager.nix
-      #<home-manager/nixos>
-      #./samba.nix
       ./drivers/pipewire.nix
-      ./workaround.nix
     ];
 
   # Swappiness
