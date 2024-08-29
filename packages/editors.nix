@@ -23,7 +23,7 @@
     dockerfile-language-server-nodejs
     docker-compose-language-service
     yaml-language-server
-    
+
     ## F#
     fsautocomplete
 
