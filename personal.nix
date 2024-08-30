@@ -12,7 +12,7 @@
   ];
 
   environment.variables = {
-    EDITOR = "helix";
+    EDITOR = "hx";
     BROWSER = "firefox";
   };
 
