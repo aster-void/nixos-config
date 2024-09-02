@@ -5,7 +5,7 @@
   imports = [
     ./personal/env.nix
     ./personal/keymap.nix # workman. change it.
-    ./personal/shell-alias.nix
+    ./personal/shell.nix
     ./personal/fonts.nix # some ja and en fonts
     ./personal/locale.nix # English + Asia/Tokyo
     ./local/password.nix
@@ -34,6 +34,7 @@
       "mlocate"
       "networkmanager"
       "wheel"
+      "docker"
       # "samba"
       # "vboxusers"
     ];

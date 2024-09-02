@@ -136,10 +136,6 @@
     };
   };
 
-  programs.bash = {
-    completion.enable = true;
-  };
-
   services.xserver.displayManager.setupCommands = ''
     ${pkgs.xorg.xrandr}/bin/xrandr --output Virtual1 --primary --mode 1920x1080 --pos 0x0 --rotate normal
   '';

@@ -1,5 +1,4 @@
 {
-  environment.shellAliases = {
     ".." = "cd ../";
     "..." = "cd ../../";
     "...." = "cd ../../../";
@@ -49,5 +48,4 @@
     rbt = "sudo nixos-rebuild test";
 
     # zoom-us = "flatpak run us.zoom.Zoom";
-  };
 }
