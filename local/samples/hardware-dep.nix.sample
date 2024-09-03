@@ -2,7 +2,7 @@
   imports = [
     # ../drivers/logitech.nix
     # ../drivers/nvidia.nix
-    # ./wsl/configuration.nix
+    # ./share/wsl/configuration.nix
     ./grub.nix
   ];
   

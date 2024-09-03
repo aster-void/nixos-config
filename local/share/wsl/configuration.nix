@@ -11,6 +11,7 @@
   imports = [
     # include NixOS-WSL modules
     <nixos-wsl/modules>
+    ../workaround/wsl.nix
   ];
 
   wsl.enable = true;
