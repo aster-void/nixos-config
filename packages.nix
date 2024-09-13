@@ -6,37 +6,20 @@
     ./packages/obs.nix
     ./packages/editors.nix
     ./packages/virtualization.nix
-    # ./packages/zoxide.nix # ... not working
   ];
 
   users.users.aster.packages = with pkgs; [
     # CLI Tools
     btop
     dstat
-    screenfetch
-    neofetch
     cpufetch
-    cmus # music player
-    cava
-
-    # Connect
-    slack
-    zoom-us
-    discord
-
-    # browsers
-    chromium
-    firefox
-    brave
-
-    # other GUI tools
-    libreoffice
   ];
 
   environment.systemPackages = with pkgs; [
-    # shell
+    # CLI Environment
+    ## Terminal Emu
     alacritty
-    kitty
+    ## Shells
     bash
     fish
     zsh
@@ -45,32 +28,27 @@
     zsh-completions
     zsh-syntax-highlighting
 
-    # shell prompt
+    ## shell prompt
     starship
     blesh
 
-    # vcs
+    # CLI Apps
+    ## vcs
     git
     lazygit
     gh
     diff-so-fancy
     gitleaks
 
-    # dev
-    act
-    firefox-devedition
-
     # cli utils
+    tree
     xsel
     gnumake
-    bat
     stow
-    zoxide
     most # view with less functions
     platinum-searcher # find but better
     ncdu # tui disk usage
     fzf
-    postgresql
 
     # network
     curl
@@ -78,9 +56,6 @@
     netcat-gnu
     openssh
     openssl
-
-    # messaging (I dont use)
-    telegram-desktop
 
     # gui drivers? idk
     qt5.full
@@ -109,10 +84,6 @@
 
     ## music
     vlc # music player
-    lollypop # music player
-
-    ## documents
-    evince # document viewer
 
     ## others
     blueberry # gui bluetooth manager
@@ -143,16 +114,15 @@
     # compilers + interpreters (if any)
     gcc
     clang
-    cmake # I'm not sure if this is a compiler
     zig
     rustc
     rustup
     cargo
-    pkg-config
     nodejs_22
     go
     gleam
     erlang
+    pkg-config
 
     # others
     wget
@@ -167,14 +137,9 @@
     # GTK themes
     arc-theme
 
-    # fonts
-    hack-font
-
     # security
     hblock
 
-    # rvt-unicode ... not sure, will delete after making sure everything works
-    tree
     variety
     # vivaldi
     # vivaldi-ffmpeg-codecs # ... not free
