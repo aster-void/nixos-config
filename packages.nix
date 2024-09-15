@@ -115,8 +115,6 @@
     rustc
     rustup
     cargo
-    go
-    gleam
 
     # others
     wget
