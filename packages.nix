@@ -112,17 +112,11 @@
     qbittorrent-qt5 # a bit torrent
 
     # compilers + interpreters (if any)
-    gcc
-    clang
-    zig
     rustc
     rustup
     cargo
-    nodejs_22
     go
     gleam
-    erlang
-    pkg-config
 
     # others
     wget
