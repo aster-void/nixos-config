@@ -25,6 +25,8 @@
   # Kernel
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
+  programs.nix-ld.enable = true;
+
   networking.hostName = "nixos"; # Define your hostname.
 
   # Configure network proxy if necessary
