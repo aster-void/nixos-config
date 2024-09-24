@@ -18,12 +18,11 @@
     u = "push --set-upstream origin HEAD";
     lo = "log --oneline";
     ls = "ls-files";
-    sync = "pull --rebase; git push";
     graph = "log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short";
     unstage = "reset HEAD --";
     root = "rev-parse --show-toplevel";
     last = "log -1 HEAD";
-    nuke = "clean -df";
+    nuke = "checkout -f HEAD";
     uncommit = "reset HEAD~";
     amend = "commit --amend --no-edit";
     recommit = "commit --amend";
