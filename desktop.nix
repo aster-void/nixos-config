@@ -17,8 +17,4 @@
   ];
 
   services.displayManager.defaultSession = "hyprland";
-
-  services.xserver.displayManager.setupCommands = ''
-    # Hyprland
-  '';
 }
