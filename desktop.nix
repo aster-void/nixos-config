@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 {
   imports = [
     # display manager
@@ -6,9 +6,7 @@
     # ./display-manager/gdm.nix
 
     # desktop / window manager
-    # ./desktop/gnome.nix # doesn't work
-    # uncommenting this fails on build, saying "conflicting pipewire and pusleaudio both turned on" or something
-
+    # ./desktop/gnome.nix # uncommenting this fails on build, saying "conflicting pipewire and pusleaudio both turned on" or something
     ./desktop/plasma6.nix
     # keymap is not applied on plasma6.
     # you need to manually edit it in the gui settings app.
