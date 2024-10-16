@@ -111,11 +111,6 @@
     ookla-speedtest # test your internet speed
     qbittorrent-qt5 # a bit torrent
 
-    # compilers + interpreters (if any)
-    rustc
-    rustup
-    cargo
-
     # others
     wget
     ripgrep
