@@ -1,11 +1,11 @@
 { pkgs, ... }:
 {
   imports = [
-    ./packages/git-alias.nix
-    ./packages/ime.nix
-    ./packages/obs.nix
-    ./packages/editors.nix
-    ./packages/virtualization.nix
+    ./git.nix
+    ./ime.nix
+    ./obs.nix
+    ./editors.nix
+    ./virtualization.nix
   ];
 
   users.users.aster.packages = with pkgs; [
@@ -39,6 +39,7 @@
     gh
     diff-so-fancy
     gitleaks
+    lefthook
 
     # cli utils
     tree

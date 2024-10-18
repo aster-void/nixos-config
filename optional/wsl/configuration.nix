@@ -11,9 +11,12 @@
   imports = [
     # include NixOS-WSL modules
     <nixos-wsl/modules>
-    ../workaround/wsl.nix
   ];
 
   wsl.enable = true;
   wsl.defaultUser = "aster";
+
+  # below is some workaround; delete them when they are not necessary anymore
+  environment.variables.PATH = lib.mkForce "$HOME/.bin:$PATH";
+  virtualisation.docker.rootless.enable = lib.mkForce false;
 }

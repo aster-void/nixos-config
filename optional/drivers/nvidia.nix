@@ -7,6 +7,7 @@
   # hyprland for nvidia
   # we no longer need this, congraturation
   # programs.hyprland.enableNvidiaPatches = true;
+  nixpkgs.config.nvidia.acceptLicense = true;
 
   hardware.nvidia = {
     # Modesetting is required.

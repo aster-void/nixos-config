@@ -14,7 +14,6 @@
     fcitx5-mozc
   ];
 
-  lib.mkForce = {
     environment.variables = {
       # fcitx says they are recommended to be unset
       # GTK_IM_MODULE = "wayland";
@@ -23,6 +22,5 @@
       SDL_IM_MODULE = "fcitx";
       GLFW_IM_MODULE = "ibus";
     };
-  };
   services.xserver.desktopManager.runXdgAutostartIfNone = true;
 }

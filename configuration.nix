@@ -10,53 +10,13 @@
     [
       # Include the results of the hardware scan.
       # use nixos-generate-config to generate
-      ./local/hardware-configuration.nix
-      ./local/hardware-dep.nix
+      ./hardware-configuration.nix
+      ./optional.nix
 
-      ./personal.nix
-      ./packages.nix
-      ./desktop.nix
-      ./drivers/pipewire.nix
+      ./user.nix
+      ./packages
     ];
 
-  # Swappiness
-  boot.kernel.sysctl = { "vm.swappiness" = 10; };
-
-  # Kernel
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-
-  programs.nix-ld.enable = true;
-
-  networking.hostName = "nixos"; # Define your hostname.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Enable networking
-  # I switched back to networkmanager from WPA because nmtui was too good
-  networking.networkmanager.enable = true;
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
-  # Disabling X11 - go for startx
-  # services.xserver.autorun = false;
-  # services.xserver.displayManager.startx.enable = true;
-
-  # for wayland dark theme  
-  programs.dconf.enable = true;
-
-  # compat + gui libs (i'm not familiar)
-  qt.enable = true;
-  programs.xwayland.enable = true;
-
-  # https://mynixos.com/options/services.xserver.desktopManager
-
-  #https://mynixos.com/options/services.xserver.windowManager
-
-  # Select internationalisation properties.
   console = {
     packages = [ pkgs.terminus_font ];
     font = "${pkgs.terminus_font}/share/consolefonts/ter-i22b.psf.gz";
@@ -67,35 +27,11 @@
   services.printing.enable = true;
   # services.printing.drivers = [pkgs.cnijfilter2]; # ... unfree
 
-  # Enable sound with pipewire. (defined in ./drivers/pipewire.nix)
-  /* sound.enable = true;
-    hardware.pulseaudio.enable = false;
-    hardware.pulseaudio.support32Bit = true;
-    security.rtkit.enable = true;
-    services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    jack.enable = true;
-
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
-  }; */
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  services.libinput.enable = true;
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.nvidia.acceptLicense = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nix.settings.auto-optimise-store = true;
-
-  # enable flatpak
-  services.flatpak.enable = true;
 
   # Auto system update
   system.autoUpgrade = {
@@ -117,44 +53,9 @@
     interval = "hourly";
   };
 
-  services.avahi = {
-    enable = true;
-    # nssmdns = true;
-    nssmdns4 = true;
-    ipv4 = true;
-    ipv6 = true;
-    publish = {
-      enable = true;
-      workstation = true;
-    };
-  };
-
-  hardware.bluetooth.enable = true; # enables support for Bluetooth
-  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
-  hardware.bluetooth.settings = {
-    General = {
-      Enable = "Source,Sink,Media,Socket";
-      Experimental = true;
-    };
-  };
-
   services.xserver.displayManager.setupCommands = ''
     ${pkgs.xorg.xrandr}/bin/xrandr --output Virtual1 --primary --mode 1920x1080 --pos 0x0 --rotate normal
   '';
-
-  # Dbus
-  services.dbus.enable = true;
-
-  # XDG portals (I'm not sure what this is)
-  xdg.portal = {
-    enable = true;
-    xdgOpenUsePortal = true;
-    extraPortals = with pkgs; [
-      xdg-desktop-portal-gtk
-      xdg-desktop-portal-wlr
-    ];
-    # wlr.enable = true;
-  };
 
   security.polkit.enable = true;
   systemd = {
@@ -173,17 +74,8 @@
     };
   };
 
-  # Gvfs
-  services.gvfs.enable = true;
-
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  networking.firewall.enable = false;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
@@ -192,8 +84,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
-
-  nixpkgs.config.permittedInsecurePackages = [
-    "openssl-1.1.1w" # "electron-19.1.9"
-  ];
 }

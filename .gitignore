@@ -2,9 +2,8 @@
 result
 
 # client-dependent
-hardware-configuration.nix
-hardware-dep.nix
+/hardware-configuration.nix
+/optional.nix
 
-# secret files
-wifi.nix
-password.nix
+# secret
+/password.nix
