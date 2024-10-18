@@ -1,4 +1,3 @@
-
 {
   imports = [
     ./optional/hardware/ # comment this out if you are installing this on WSL

@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   # Swappiness
   boot.kernel.sysctl = { "vm.swappiness" = 10; };
 

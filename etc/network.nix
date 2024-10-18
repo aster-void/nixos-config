@@ -1,6 +1,5 @@
+{ pkgs, ... }: {
 
- {pkgs, ...}:{
-  
   networking.hostName = "nixos"; # Define your hostname.
 
   # Open ports in the firewall.

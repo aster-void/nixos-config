@@ -14,13 +14,13 @@
     fcitx5-mozc
   ];
 
-    environment.variables = {
-      # fcitx says they are recommended to be unset
-      # GTK_IM_MODULE = "wayland";
-      # QT_IM_MODULE = "fcitx";
-      XMODIFIERS = "@im=fcitx";
-      SDL_IM_MODULE = "fcitx";
-      GLFW_IM_MODULE = "ibus";
-    };
+  environment.variables = {
+    # fcitx says they are recommended to be unset
+    # GTK_IM_MODULE = "wayland";
+    # QT_IM_MODULE = "fcitx";
+    XMODIFIERS = "@im=fcitx";
+    SDL_IM_MODULE = "fcitx";
+    GLFW_IM_MODULE = "ibus";
+  };
   services.xserver.desktopManager.runXdgAutostartIfNone = true;
 }
