@@ -7,6 +7,6 @@
     ./locale.nix
     ./network.nix
     ./pwn.nix
-    ./shell/
+    ./shell
   ];
 }

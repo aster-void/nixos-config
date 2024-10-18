@@ -7,6 +7,7 @@
 3. run ./init.sh
 4. edit the config files (I recommend editing ./etc/keymap.nix, ./user.nix, and ./optional.nix before running rebuild)
 5. run `nixos-rebuild switch`
+6. run `lefthook install` (optional)
 
 ## Things to do after
 

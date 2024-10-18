@@ -18,9 +18,9 @@
   gsw = "git switch";
   gf = "git fetch --prune && git pull";
   gs = "git status -s";
-  gsv = "git status -v | diff-so-fancy | less --tabs=4 -RF";
+  gsv = "git status -v | diff-so-fancy";
   gsr = "git status";
-  gd = "git diff --color-words | diff-so-fancy | less --tabs=4 -RF";
+  gd = "git diff --color-words | diff-so-fancy";
   ga = "git add -A";
   gc = "git commit -m";
   gp = "git push";

@@ -15,6 +15,7 @@
 
       ./user.nix
       ./packages
+      ./etc
     ];
 
   console = {
