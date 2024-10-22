@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   imports = [
     # display manager
@@ -6,8 +6,8 @@
     # ./display-manager/gdm.nix
 
     # ./desktop/gnome.nix # uncommenting this fails on build, saying "conflicting pipewire and pusleaudio both turned on" or something
-    ./desktop/plasma6.nix
-    ./desktop/hyprland.nix
+    ./plasma6.nix
+    ./hyprland.nix
   ];
 
   # Disabling X11 - go for startx

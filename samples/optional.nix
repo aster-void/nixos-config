@@ -1,8 +1,9 @@
 {
   imports = [
-    ./optional/hardware/ # comment this out if you are installing this on WSL
-    # ./drivers/logitech.nix
-    # ./drivers/nvidia.nix
+    ./desktop
+    ./optional/hardware # comment this out if you are installing this on WSL
+    # ./optional/drivers/logitech.nix
+    # ./optional/drivers/nvidia.nix
     ./optional/wsl/configuration.nix
   ];
 
