@@ -1,6 +1,7 @@
 {
   imports = [
     ./desktop
+    # ./optional/aagl.nix
     ./optional/hardware # comment this out if you are installing this on WSL
     # ./optional/drivers/logitech.nix
     # ./optional/drivers/nvidia.nix
