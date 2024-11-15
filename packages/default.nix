@@ -7,6 +7,7 @@
     ./editors.nix
     ./virtualization.nix
   ];
+  services.flatpak.enable = true;
 
   users.users.aster.packages = with pkgs; [
     # CLI Tools
@@ -39,7 +40,6 @@
     gh
     diff-so-fancy
     gitleaks
-    lefthook
 
     # cli utils
     tree
