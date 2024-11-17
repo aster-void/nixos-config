@@ -59,10 +59,8 @@
     openssl
 
     # gui drivers? idk
-    qt5.full
     libsForQt5.qt5.qtwayland
     qt6.qtwayland
-    qt6.qt5compat
     qt6Packages.qtstyleplugin-kvantum # SVG based theme engine for Qt/KDE
     gtk3
     gtk4
@@ -106,11 +104,8 @@
     gimp
     killall # kill many processes at once
     insync # an alternative to syncing files across hardwares
-    meld # diff command in gui
     networkmanagerapplet # network manager in systray
     nixos-generators # convert the config into other formats
-    ookla-speedtest # test your internet speed
-    qbittorrent-qt5 # a bit torrent
 
     # others
     wget
