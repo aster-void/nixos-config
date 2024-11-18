@@ -4,14 +4,14 @@
     enable = true;
     type = "fcitx5";
     fcitx5.addons = with pkgs; [
-      fcitx5-mozc
+      # fcitx5-mozc
       fcitx5-gtk
       libsForQt5.fcitx5-qt
     ];
   };
 
-  environment.systemPackages = with pkgs; [
-    fcitx5-mozc
+  environment.systemPackages = [
+    # pkgs.fcitx5-mozc
   ];
 
   environment.variables = {
