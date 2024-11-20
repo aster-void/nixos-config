@@ -7,7 +7,6 @@
     ./editors.nix
     ./virtualization.nix
   ];
-  services.flatpak.enable = true;
 
   users.users.aster.packages = with pkgs; [
     # CLI Tools
@@ -18,6 +17,8 @@
 
   environment.systemPackages = with pkgs; [
     # CLI Environment
+    ## busybox
+    busybox
     ## Terminal Emu
     alacritty
     ## Shells
