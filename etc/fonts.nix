@@ -1,6 +1,11 @@
 { pkgs, ... }: {
-  fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "Cousine" "CodeNewRoman" "DejaVuSansMono" "Meslo" "Noto" ]; })
+  fonts.packages = with pkgs.nerd-fonts; [
+    cousine
+    code-new-roman
+    dejavu-sans-mono
+    meslo-lg
+    noto
+  ] ++ (with pkgs; [
     noto-fonts
     noto-fonts-cjk-sans
     noto-fonts-emoji
@@ -11,7 +16,7 @@
     proggyfonts
 
     dejavu_fonts
-  ];
+  ]);
   fonts.fontconfig = {
     enable = true;
 
