@@ -18,7 +18,7 @@
   environment.systemPackages = with pkgs; [
     # CLI Environment
     ## busybox
-    busybox
+    lsof
     ## Terminal Emu
     alacritty
     ## Shells
