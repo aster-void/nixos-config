@@ -76,6 +76,8 @@
     unzip # unzips files
     ffmpeg # convert any music/video files
 
+    firefox
+
     ## image previewer
     feh # image viewer that is too simple
     imagemagick # image editor i guess?
