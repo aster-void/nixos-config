@@ -1,8 +1,10 @@
 { lib, pkgs, config, ... }:
+let assertMsg = lib.asserts.assertMsg; in
 assert
-lib.asserts.assertMsg
-  (!(builtins.elem pkgs.fcitx5 config.environment.systemPackages)) # packages.contains should not contain fcitx5
-  "fcitx5 must not be installed via environment.systemPackages. use i18n.inputMethod and only it.";
+assertMsg
+  # reads as: not (system.packages |> list.contains fcitx5)
+  (!(builtins.elem pkgs.fcitx5 config.environment.systemPackages))
+  "fcitx5 must not be installed via environment.systemPackages, as it does not contain addons and may (will) make it impossible to find the addon. use i18n.inputMethod and only it.";
 let
   enable = true;
   fcitx5-addons = with pkgs; [
