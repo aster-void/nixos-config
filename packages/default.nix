@@ -2,7 +2,6 @@
 {
   imports = [
     ./git.nix
-    ./ime.nix
     ./obs.nix
     ./editors.nix
     ./virtualization.nix
