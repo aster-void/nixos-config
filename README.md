@@ -5,6 +5,8 @@
 I don't recommend using this repo out of the box, because many things are customized just for me.
 I'm making this open just s.t. you can read this as a reference, and future me can clone this before setting up SSH.
 
+(take a look at NOTES.md though, it may be worth it)
+
 ## How to Use
 
 1. install NixOS.
