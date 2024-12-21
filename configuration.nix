@@ -11,11 +11,14 @@
       # Include the results of the hardware scan.
       # use nixos-generate-config to generate
       ./hardware-configuration.nix
+
       ./optional.nix
 
       ./user.nix
       ./packages
       ./etc
+
+      ./validations/evaluate.nix
     ];
 
   console = {
@@ -92,6 +95,5 @@
     "dotnet-sdk-6.0.428"
     "dotnet-sdk-7.0.410"
     "dotnet-sdk-wrapped-6.0.428"
-
   ];
 }

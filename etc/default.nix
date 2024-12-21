@@ -4,7 +4,7 @@
     ./fonts.nix
     ./kernel.nix
     ./keymap.nix
-    ./locale.nix
+    ./i18n
     ./network.nix
     ./pwn.nix
     ./shell

@@ -16,6 +16,9 @@
   ];
 
   environment.systemPackages = with pkgs; [
+    # dev of this flake
+    lefthook
+
     # CLI Environment
     ## busybox
     lsof
