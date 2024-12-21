@@ -11,4 +11,5 @@
   solution:
     - (simple) launch them using `--enable-wayland-ime` flag, i.e. `slack --enable-wayland-ime`
       - some electron apps may have background worker that interfere with newly launched app frontend. make sure to `killall -r slack` beforehand.
-    - (complex but automatic) todo: someone help me launch apps with flags on app launchers
+    - (complex but automatic) edit `~/.local/share/applications/{app}.desktop` and set `Exec={app} --enable-wayland-ime %U` + required fields. (ref: <https://wiki.archlinux.org/title/Desktop_entries>)
+      - or, you can use home-manager to manage that file too. see my home-manager in my dotfiles repo for more info.
