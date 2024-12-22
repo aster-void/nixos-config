@@ -1,9 +1,1 @@
-# ?
-result
-
-# client-dependent
-/hardware-configuration.nix
-/optional.nix
-
-# secret
-/password.nix
+/result

@@ -9,10 +9,11 @@
   imports =
     [
       # Include the results of the hardware scan.
-      # use nixos-generate-config to generate
-      ./hardware-configuration.nix
+      # use nixos-generate-config to generate at hardware-configuration.nix
+      ./local/hardware-configuration.nix
 
-      ./optional.nix
+      ./local/optional.nix
+      ./local/password.nix
 
       ./user.nix
       ./packages
@@ -29,7 +30,7 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
-  # services.printing.drivers = [pkgs.cnijfilter2]; # ... unfree
+  # services.printing.drivers = [pkgs.cnijfilter2];
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

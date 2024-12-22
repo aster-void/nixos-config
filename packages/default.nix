@@ -15,8 +15,10 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    # dev of this flake
+    # devel of this flake
+    # TODO: migrate this config to flakes, s.t. I can put the devShell config to there
     lefthook
+    deadnix
 
     # CLI Environment
     ## busybox

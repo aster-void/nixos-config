@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 {
   # Define a user account.
   users.users.aster = {

@@ -3,3 +3,5 @@ pre-commit:
     format:
       run: nixpkgs-fmt .
       stage_fixed: true
+    deadnix:
+      run: deadnix --fail

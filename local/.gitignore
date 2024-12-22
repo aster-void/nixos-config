@@ -1,4 +1,3 @@
-/*
-!/.gitignore
-!/share
-!/samples
+/hardware-configuration.nix
+/optional.nix
+/password.nix

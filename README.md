@@ -4,6 +4,7 @@
 
 I don't recommend using this repo out of the box, because many things are customized just for me.
 I'm making this open just s.t. you can read this as a reference, and future me can clone this before setting up SSH.
+It may also run breaking change at any time, so even if you are using this, it's highly recommended to detach from my remote repo.
 
 (take a look at NOTES.md though, it may be worth it)
 

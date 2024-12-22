@@ -12,7 +12,7 @@
 
       efiSupport = true;
       useOSProber = true;
-      # device = "nodev"; # ... example. define in hardware-dep.nix
+      # device = "nodev"; # ... example. define in local/optional.nix
 
       default = "saved";
     };
