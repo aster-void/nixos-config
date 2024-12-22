@@ -10,4 +10,6 @@ jobs:
       - uses: cachix/install-nix-action@v27
         with:
           nix_path: nixpkgs=channel:nixos-unstable
-      - run: nix-shell -p '(nixos{}).nixos-rebuild dry-run'
+
+        # read <https://nixos.wiki/wiki/Nixos-rebuild>
+      - run: nix-shell -p '(nixos{}).nixos-rebuild' --run 'nixos-rebuild dry-run -I nixos-config=./configuration.nix'
