@@ -5,10 +5,6 @@
 { ... }: {
   imports =
     [
-      ./local/optional.nix
-      ./local/password.nix
-
-      ./user.nix
       ./packages
       ./etc
 

@@ -15,7 +15,7 @@
     //
     (
       let
-        extraArgs = {
+        extra = {
           user = "aster";
           git-email = "137767097+aster-void@users.noreply.github.com";
         };
@@ -27,7 +27,20 @@
             modules = [
               ./configuration.nix
             ];
-            inherit extraArgs;
+            extraArgs = extra // {
+              nixos-host = "nixos";
+            };
+          };
+        nixosConfigurations.desktop = nixpkgs.lib.nixosSystem
+          {
+            system = "x86_64-linux";
+            modules = [
+              ./configuration.nix
+              ./hosts/desktop
+            ];
+            extraArgs = extra // {
+              nixos-host = "desktop";
+            };
           };
       }
     );
