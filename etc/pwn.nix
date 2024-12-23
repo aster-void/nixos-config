@@ -1,6 +1,6 @@
-{ pkgs, ... }:
+{ pkgs, user, ... }:
 {
-  users.users.aster.packages = with pkgs; [
+  users.users.${user}.packages = with pkgs; [
     ghidra
   ];
 }

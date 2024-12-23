@@ -5,7 +5,7 @@
 # NixOS-WSL specific options are documented on the NixOS-WSL repository:
 # https://github.com/nix-community/NixOS-WSL
 
-{ lib, ... }:
+{ lib, user, ... }:
 
 {
   imports = [
@@ -14,7 +14,7 @@
   ];
 
   wsl.enable = true;
-  wsl.defaultUser = "aster";
+  wsl.defaultUser = user;
 
   # below is some workaround; delete them when they are not necessary anymore
   environment.variables.PATH = lib.mkForce "$HOME/.bin:$PATH";
