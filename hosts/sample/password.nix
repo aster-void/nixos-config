@@ -1,8 +1,5 @@
+# this goes into ./hosts/share .
 { user, ... }: {
-  # Enable automatic login for the user.
-  services.displayManager.autoLogin.user = user;
-  services.displayManager.autoLogin.enable = true;
-
   # @CHANGEME: YOU MUST CHANGE THIS!!!
   # this is a bcrypt of password "password",
   # in case you accidentally rebuilded it without changing.

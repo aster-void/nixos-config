@@ -5,10 +5,6 @@
 { ... }: {
   imports =
     [
-      # Include the results of the hardware scan.
-      # use nixos-generate-config to generate at hardware-configuration.nix
-      ./local/hardware-configuration.nix
-
       ./local/optional.nix
       ./local/password.nix
 
