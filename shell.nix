@@ -1,7 +1,7 @@
 { pkgs ? import <nixpkgs> { } }: pkgs.mkShell {
   buildInputs = with pkgs; [
-    nixpkgs-fmt
     lefthook
+    nixpkgs-fmt
     deadnix
   ];
   shellHook = ''

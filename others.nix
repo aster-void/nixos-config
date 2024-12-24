@@ -11,6 +11,7 @@
   # services.printing.drivers = [pkgs.cnijfilter2];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.accept-flake-config = true;
   nix.settings.auto-optimise-store = true;
 
   # Auto system update
@@ -56,4 +57,16 @@
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
+
+  programs.direnv = {
+    enable = true;
+    package = pkgs.direnv;
+    silent = false;
+    loadInNixShell = true;
+    direnvrcExtra = "";
+    nix-direnv = {
+      enable = true;
+      package = pkgs.nix-direnv;
+    };
+  };
 }

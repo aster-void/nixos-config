@@ -20,4 +20,5 @@ It may also run breaking change at any time, so if you are using this, it's high
 
 ## Things to do after
 
+- run `sudo waydroid init -s GAPPS -f` to activate waydroid
 - clone .dotfiles and decorations. (decorations is private for copyright reason)
