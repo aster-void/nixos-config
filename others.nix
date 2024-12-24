@@ -11,6 +11,7 @@
   # services.printing.drivers = [pkgs.cnijfilter2];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.accept-flake-config = true;
   nix.settings.auto-optimise-store = true;
 
   # Auto system update
