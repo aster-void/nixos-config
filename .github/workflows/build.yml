@@ -12,4 +12,4 @@ jobs:
           nix_path: nixpkgs=channel:nixos-unstable
 
         # read <https://nixos.wiki/wiki/Nixos-rebuild>
-      - run: nix-shell -p '(nixos{}).nixos-rebuild' --run 'nixos-rebuild dry-run -I --flake=.#desktop'
+      - run: nix-shell -p '(nixos{}).nixos-rebuild' --run 'nixos-rebuild dry-run --flake .#desktop'
