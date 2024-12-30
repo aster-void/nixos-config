@@ -8,5 +8,6 @@
     ./network.nix
     ./pwn.nix
     ./shell
+    ./user.nix
   ];
 }

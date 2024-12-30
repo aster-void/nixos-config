@@ -1,9 +1,9 @@
-{ ... }:
+{ user, ... }:
 {
   # Define a user account.
-  users.users.aster = {
+  users.users.${user} = {
     isNormalUser = true;
-    description = "aster";
+    description = user;
     extraGroups = [
       "mlocate"
       "networkmanager"

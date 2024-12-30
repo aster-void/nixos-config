@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, user, ... }:
 {
   imports = [
     ./git.nix
@@ -7,7 +7,7 @@
     ./virtualization.nix
   ];
 
-  users.users.aster.packages = with pkgs; [
+  users.users.${user}.packages = with pkgs; [
     # CLI Tools
     btop
     dstat

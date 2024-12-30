@@ -1,10 +1,10 @@
-{
+{ user, git-email, ... }: {
   programs.git = {
     enable = true;
     config = {
       user = {
-        name = "aster";
-        email = "137767097+aster-void@users.noreply.github.com";
+        name = user;
+        email = git-email;
       };
       core.editor = "hx";
       init.defaultBranch = "main";
