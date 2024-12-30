@@ -25,7 +25,7 @@
           {
             system = "x86_64-linux";
             modules = [
-              ./configuration.nix
+              ./nixos/configuration.nix
             ];
             extraArgs = extra // {
               nixos-host = "nixos";
@@ -35,7 +35,7 @@
           {
             system = "x86_64-linux";
             modules = [
-              ./configuration.nix
+              ./nixos/configuration.nix
               ./hosts/desktop
             ];
             extraArgs = extra // {

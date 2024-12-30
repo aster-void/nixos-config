@@ -1,6 +1,6 @@
 {
   imports = [
-    ../../desktop
+    ../../nixos/desktop
     # ../../plugins/aagl.nix
     ../../plugins/hardware # comment this out if you are installing this on WSL
     # ../../plugins/drivers/logitech.nix

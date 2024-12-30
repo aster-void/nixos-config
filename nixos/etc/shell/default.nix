@@ -1,5 +1,5 @@
-{ nixos-host, ... }:
-let shellAliases = import ./aliases.nix { inherit nixos-host; }; in
+{ ... }:
+let shellAliases = import ./aliases.nix; in
 {
   environment.shellAliases = shellAliases;
 

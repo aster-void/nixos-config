@@ -7,6 +7,6 @@
     enable = true;
   };
   environment.systemPackages = with pkgs; [
-    kdeconnect
+    plasma5Packages.kdeconnect-kde
   ];
 }

@@ -1,7 +1,7 @@
 { user, ... }: {
   imports = [
     ./hardware-configuration.nix
-    ../../desktop
+    ../../nixos/desktop
     ../../plugins/hardware # comment this out if you are installing this on WSL
     # ../../plugins/drivers/logitech.nix
     # ../../plugins/drivers/nvidia.nix

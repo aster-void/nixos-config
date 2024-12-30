@@ -1,4 +1,4 @@
-{ nixos-host }: {
+{
   ".." = "cd ../";
   "..." = "cd ../../";
   "...." = "cd ../../../";
@@ -43,7 +43,7 @@
   home = "home-manager";
   nixgc = "nix-collect-garbage";
   rb = "sudo nixos-rebuild";
-  rbs = "sudo nixos-rebuild switch --flake .#${nixos-host}";
+  rbs = "sudo nixos-rebuild switch --flake";
   rbb = "sudo nixos-rebuild boot";
   rbbb = "sudo nixos-rebuild boot && reboot";
   rbt = "sudo nixos-rebuild test";
