@@ -12,8 +12,4 @@ jobs:
           nix_path: nixpkgs=channel:nixos-unstable
 
         # read <https://nixos.wiki/wiki/Nixos-rebuild>
-
-      # generate config s.t. it can be used in init.sh
-      - run: nix-shell -p '(nixos{}).nixos-generate-config' --run 'nixos-generate-config --dir .'
-      - run: ./init.sh
-      - run: nix-shell -p '(nixos{}).nixos-rebuild' --run 'nixos-rebuild dry-run -I nixos-config=./configuration.nix'
+      - run: nix-shell -p '(nixos{}).nixos-rebuild' --run 'nixos-rebuild dry-run -I --flake=.#desktop'
