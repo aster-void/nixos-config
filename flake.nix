@@ -19,29 +19,18 @@
           user = "aster";
           git-email = "137767097+aster-void@users.noreply.github.com";
         };
+        systemConfig = host: nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            ./nixos/configuration.nix
+            ./hosts/${host}
+          ];
+          extraArgs = extra;
+        };
       in
       {
-        nixosConfigurations.nixos = nixpkgs.lib.nixosSystem
-          {
-            system = "x86_64-linux";
-            modules = [
-              ./nixos/configuration.nix
-            ];
-            extraArgs = extra // {
-              nixos-host = "nixos";
-            };
-          };
-        nixosConfigurations.desktop = nixpkgs.lib.nixosSystem
-          {
-            system = "x86_64-linux";
-            modules = [
-              ./nixos/configuration.nix
-              ./hosts/desktop
-            ];
-            extraArgs = extra // {
-              nixos-host = "desktop";
-            };
-          };
+        nixosConfigurations.desktop = systemConfig "desktop";
+        nixosConfigurations.laptop = systemConfig "laptop";
       }
     );
 }
