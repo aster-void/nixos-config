@@ -43,7 +43,7 @@
   home = "home-manager";
   nixgc = "nix-collect-garbage";
   rb = "sudo nixos-rebuild";
-  rbs = "sudo nixos-rebuild switch --flake";
+  rbs = "sudo nixos-rebuild switch";
   rbb = "sudo nixos-rebuild boot";
   rbbb = "sudo nixos-rebuild boot && reboot";
   rbt = "sudo nixos-rebuild test";
