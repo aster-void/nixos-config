@@ -3,6 +3,7 @@
     lefthook
     nixpkgs-fmt
     deadnix
+    nil
   ];
   shellHook = ''
     lefthook install

@@ -4,3 +4,6 @@ theme = "catppuccin_mocha"
 hidden = false
 git-ignore = false
 
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
