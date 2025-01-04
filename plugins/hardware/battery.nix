@@ -31,4 +31,7 @@
     };
   };
   powerManagement.powertop.enable = true;
+
+  # HACK: nixos won't build without this
+  services.power-profiles-daemon.enable = false;
 }

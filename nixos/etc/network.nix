@@ -1,6 +1,6 @@
-{ lib, ... }: {
+{ host, ... }: {
 
-  networking.hostName = lib.mkDefault "nixos"; # Define your hostname.
+  networking.hostName = "${host}"; # Define your hostname.
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];

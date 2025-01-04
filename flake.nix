@@ -25,7 +25,9 @@
             ./nixos/configuration.nix
             ./hosts/${host}
           ];
-          extraArgs = extra;
+          extraArgs = extra // {
+            inherit host;
+          };
         };
       in
       {
