@@ -9,7 +9,8 @@
       ./etc
 
       ./validations/evaluate.nix
-      ./others.nix
+      ./nix.nix
+      ./services.nix
     ];
 
   # Allow unfree packages

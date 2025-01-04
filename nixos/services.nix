@@ -1,4 +1,3 @@
-# TODO: move each of those configs to corresponding file (create one if not exists)
 { pkgs, ... }: {
   console = {
     packages = [ pkgs.terminus_font ];
@@ -10,21 +9,6 @@
   services.printing.enable = true;
   # services.printing.drivers = [pkgs.cnijfilter2];
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  nix.settings.accept-flake-config = true;
-  nix.settings.auto-optimise-store = true;
-
-  nix.gc = {
-    automatic = true;
-    options = "--delete-older-than 3d";
-    dates = "weekly";
-  };
-
-  # Auto system update
-  system.autoUpgrade = {
-    enable = false;
-  };
-
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
@@ -32,8 +16,6 @@
   #   enable = true;
   #   enableSSHSupport = true;
   # };
-
-  # List services that you want to enable:
 
   services.locate = {
     enable = true;
@@ -64,6 +46,7 @@
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
+  # Enable direnv.
   programs.direnv = {
     enable = true;
     package = pkgs.direnv;
@@ -74,5 +57,16 @@
       enable = true;
       package = pkgs.nix-direnv;
     };
+  };
+
+  # Enable ClamAV.
+  services.clamav = {
+    daemon.enable = true;
+
+    scanner.enable = true;
+    updater.enable = true;
+
+    # third-party virus definition files? https://rseichter.github.io/fangfrisch/
+    fangfrisch.enable = true;
   };
 }
