@@ -19,10 +19,12 @@
         modules = [
           ./nixos/configuration.nix
           ./hosts/${host}
+          {
+            config._module.args = extra // {
+              inherit host;
+            };
+          }
         ];
-        extraArgs = extra // {
-          inherit host;
-        };
       };
     in
     {
