@@ -29,7 +29,7 @@
     in
     {
       devShell.${system} = import ./shell.nix { inherit pkgs; };
-      nixosConfigurations.desktop = mkSystemConfig "desktop";
-      nixosConfigurations.laptop = mkSystemConfig "laptop";
+      nixosConfigurations.amberwood = mkSystemConfig "amberwood";
+      nixosConfigurations.bogster = mkSystemConfig "bogster";
     };
 }
