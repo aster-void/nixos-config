@@ -16,7 +16,7 @@
   # services.xserver.autorun = false;
   # services.xserver.displayManager.startx.enable = true;
 
-  services.displayManager.defaultSession = "hyprland";
+  services.displayManager.defaultSession = "hyprland-uwsm";
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;

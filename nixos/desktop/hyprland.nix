@@ -8,10 +8,9 @@
   programs.hyprland = {
     # Install the packages from nixpkgs
     enable = true;
-    # Whether to enable XWayland
-    xwayland = {
-      enable = true;
-    };
+    xwayland.enable = true;
+    # use Universal Wayland Session Manager
+    withUWSM = true;
   };
 
   xdg.portal.extraPortals = with pkgs; [
