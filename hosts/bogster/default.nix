@@ -1,8 +1,8 @@
 { user, ... }: {
   imports = [
     ./hardware-configuration.nix
-    ../../nixos/desktop
-    ../../plugins/hardware
+    ../../nixos/modules/desktop
+    ../../nixos/modules/hardware
   ];
 
   services.displayManager.autoLogin.user = user;

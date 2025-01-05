@@ -1,14 +1,11 @@
 # AAGL on nix from https://github.com/ezKEa/aagl-gtk-on-nix
-{ ... }:
-let
-  aagl = import (builtins.fetchTarball "https://github.com/ezKEa/aagl-gtk-on-nix/archive/main.tar.gz");
-in
+{ inputs, ... }:
 {
   imports = [
-    aagl.module
+    inputs.aagl.nixosModules.default
   ];
 
-  nix.settings = aagl.nixConfig; # Set up Cachix
+  nix.settings = inputs.aagl.nixConfig; # Set up Cachix
   # programs.anime-game-launcher.enable = true;
   # programs.anime-games-launcher.enable = true;
   # programs.anime-borb-launcher.enable = true;

@@ -1,11 +1,11 @@
 { user, ... }: {
   imports = [
     ./hardware-configuration.nix
-    # ../../plugins/aagl.nix
-    ../../nixos/desktop
-    ../../plugins/hardware # comment this out if you are installing this on WSL
-    ../../plugins/drivers/logitech.nix
-    ../../plugins/drivers/nvidia.nix
+    # ../../nixos/modules/aagl.nix
+    ../../nixos/modules/desktop
+    ../../nixos/modules/hardware
+    ../../nixos/modules/drivers/logitech.nix
+    ../../nixos/modules/drivers/nvidia.nix
   ];
 
   services.displayManager.autoLogin.user = user;
