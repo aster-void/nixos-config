@@ -4,6 +4,8 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
 
+    hyprland.url = "github:hyprwm/Hyprland";
+    hyprland.inputs.nixpkgs.follows = "nixpkgs";
     # aagl.url = "github:ezKEa/aagl-gtk-on-nix";
     # aagl.inputs.nixpkgs.follows = "nixpkgs";
   };
@@ -14,7 +16,7 @@
       pkgs = nixpkgs.legacyPackages.${system};
 
       extra = {
-        inherit inputs;
+        inherit system inputs;
         user = "aster";
         git-email = "137767097+aster-void@users.noreply.github.com";
       };
