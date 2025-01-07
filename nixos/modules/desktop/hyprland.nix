@@ -1,7 +1,4 @@
-{ pkgs, system, inputs, ... }:
-let
-  hyprland = inputs.hyprland.packages.${system}.default;
-in
+{ pkgs, ... }:
 {
   imports = [
     ./wayland.nix
@@ -10,12 +7,12 @@ in
   programs.hyprland = {
     # Install the packages from nixpkgs
     enable = true;
-    package = hyprland;
     xwayland.enable = true;
     # use Universal Wayland Session Manager
     withUWSM = true;
   };
 
+  # no longer necessary
   xdg.portal.extraPortals = [
     # pkgs.xdg-desktop-portal-hyprland
   ];
