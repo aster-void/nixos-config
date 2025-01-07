@@ -8,8 +8,6 @@
     # ./desktop/gnome.nix # uncommenting this fails on build, saying "conflicting pipewire and pusleaudio both turned on" or something
     ./plasma6.nix
     ./hyprland.nix
-    # - To use Flatpak you must enable XDG Desktop Portals with xdg.portal.enable.
-    ../flatpak.nix
   ];
 
   # Disabling X11 - go for startx
@@ -19,8 +17,8 @@
   services.displayManager.defaultSession = "hyprland-uwsm";
 
   # Enable the X11 windowing system.
+  # (or maybe it was just named poorly and may also work for wayland idk)
   services.xserver.enable = true;
-  # compat?
   programs.xwayland.enable = true;
   # for wayland dark theme  
   programs.dconf.enable = true;
@@ -36,9 +34,6 @@
     xdgOpenUsePortal = true;
     extraPortals = with pkgs; [
       xdg-desktop-portal-gtk
-      xdg-desktop-portal-wlr
     ];
-    wlr.enable = true;
   };
-
 }

@@ -3,6 +3,7 @@
     ./hardware-configuration.nix
     ../../nixos/modules/desktop
     ../../nixos/modules/hardware
+    ../../nixos/modules/flatpak.nix
     ../../nixos/modules/drivers/logitech.nix
     ../../nixos/modules/drivers/nvidia.nix
   ];
