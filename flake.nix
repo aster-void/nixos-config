@@ -6,8 +6,6 @@
 
     hyprland.url = "github:hyprwm/Hyprland";
     hyprland.inputs.nixpkgs.follows = "nixpkgs";
-    # aagl.url = "github:ezKEa/aagl-gtk-on-nix";
-    # aagl.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = { nixpkgs, ... } @ inputs:

@@ -1,7 +1,6 @@
 { user, ... }: {
   imports = [
     ./hardware-configuration.nix
-    # ../../nixos/modules/aagl.nix
     ../../nixos/modules/desktop
     ../../nixos/modules/hardware
     ../../nixos/modules/drivers/logitech.nix
