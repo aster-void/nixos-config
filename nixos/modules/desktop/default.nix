@@ -8,9 +8,9 @@
     # ./desktop/gnome.nix # uncommenting this fails on build, saying "conflicting pipewire and pusleaudio both turned on" or something
     ./plasma6.nix
     ./hyprland.nix
+    # - To use Flatpak you must enable XDG Desktop Portals with xdg.portal.enable.
+    ../flatpak.nix
   ];
-  # - To use Flatpak you must enable XDG Desktop Portals with xdg.portal.enable.
-  services.flatpak.enable = true;
 
   # Disabling X11 - go for startx
   # services.xserver.autorun = false;
