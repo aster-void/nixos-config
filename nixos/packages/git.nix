@@ -29,6 +29,7 @@
       f = "fetch --prune";
       u = "push --set-upstream origin HEAD";
       lo = "log --oneline";
+      logo = "log --oneline"; # not a logo
       ls = "ls-files";
       graph = "log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short";
       unstage = "reset HEAD --";

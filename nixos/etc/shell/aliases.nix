@@ -10,19 +10,16 @@
   "h." = "hx .";
 
   g = "git";
-  glog = "git log --oneline";
   gb = "git branch";
   gba = "git branch -a";
   gco = "git checkout";
   gcob = "git checkout -b";
   gsw = "git switch";
-  gf = "git fetch --prune && git pull";
+  gf = "git fetch --prune";
   gs = "git status -s";
   gsv = "git status -v | diff-so-fancy";
-  gsr = "git status";
   gd = "git diff --color-words | diff-so-fancy";
   ga = "git add -A";
-  gc = "git commit -m";
   gp = "git push";
   gu = "git push --set-upstream origin HEAD";
   gl = "git pull";
@@ -47,6 +44,5 @@
   rbb = "sudo nixos-rebuild boot";
   rbbb = "sudo nixos-rebuild boot && reboot";
   rbt = "sudo nixos-rebuild test";
-
   # zoom-us = "flatpak run us.zoom.Zoom";
 }
