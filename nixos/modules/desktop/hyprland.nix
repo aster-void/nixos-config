@@ -12,11 +12,6 @@
     withUWSM = true;
   };
 
-  # no longer necessary
-  xdg.portal.extraPortals = [
-    # pkgs.xdg-desktop-portal-hyprland
-  ];
-
   environment.systemPackages = with pkgs; [
     wofi
     hyprland
