@@ -13,6 +13,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    # walker
     hyprland
     hyprland-protocols
     hyprcursor

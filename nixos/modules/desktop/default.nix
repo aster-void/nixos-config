@@ -6,7 +6,7 @@
     # ./display-manager/gdm.nix
 
     # ./desktop/gnome.nix # uncommenting this fails on build, saying "conflicting pipewire and pusleaudio both turned on" or something
-    ./plasma6.nix
+    # ./plasma6.nix
     ./hyprland.nix
   ];
 

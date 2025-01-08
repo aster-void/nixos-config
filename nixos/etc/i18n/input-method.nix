@@ -10,7 +10,10 @@ in
   i18n.inputMethod = {
     enable = true;
     type = "fcitx5";
-    fcitx5.addons = fcitx5-addons;
+    fcitx5 = {
+      addons = fcitx5-addons;
+      waylandFrontend = true;
+    };
   };
 
   environment.variables = {
