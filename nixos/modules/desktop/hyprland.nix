@@ -13,7 +13,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-    wofi
     hyprland
     hyprland-protocols
     hyprcursor
