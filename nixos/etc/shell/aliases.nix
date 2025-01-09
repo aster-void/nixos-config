@@ -35,6 +35,8 @@
   cl = "clear";
 
   nixman = "cd /etc/nixos/; sudo -s;";
+  flake = "nix flake";
+
   hs = "home-manager switch";
   hypr = "cd ~/.config/hypr/; ls";
   home = "home-manager";
