@@ -14,9 +14,9 @@
   system.autoUpgrade = {
     enable = false;
   };
+  nix.settings.trusted-users = [ "root" "aster" ];
 
   nix.settings.trusted-substituters = [
     "https://hydra.nixos.org/"
-    "https://helix.cachix.org/"
   ];
 }
