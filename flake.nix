@@ -3,9 +3,11 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    agenix.url = "github:ryantm/agenix";
+    agenix.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { nixpkgs, ... } @ inputs:
+  outputs = { nixpkgs, agenix, ... } @ inputs:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -15,14 +17,16 @@
         user = "aster";
         git-email = "137767097+aster-void@users.noreply.github.com";
       };
+
       mkSystemConfig = host: nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
+          agenix.nixosModules.default
           ./nixos/configuration.nix
           ./hosts/${host}
           {
             config._module.args = extra // {
-              inherit host;
+              inherit host inputs;
             };
           }
         ];

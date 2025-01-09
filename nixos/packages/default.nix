@@ -1,4 +1,4 @@
-{ pkgs, user, ... }:
+{ pkgs, user, inputs, ... }:
 {
   imports = [
     ./git.nix
@@ -19,6 +19,7 @@
     # TODO: migrate this config to flakes, s.t. I can put the devShell config to there
     lefthook
     deadnix
+    inputs.agenix.packages.${pkgs.system}.default
 
     # CLI Environment
     ## busybox
