@@ -3,10 +3,6 @@
 
   # Load nvidia driver for Xorg and Wayland
   services.xserver.videoDrivers = [ "nvidia" ];
-
-  # hyprland for nvidia
-  # we no longer need this, congraturation
-  # programs.hyprland.enableNvidiaPatches = true;
   nixpkgs.config.nvidia.acceptLicense = true;
 
   hardware.nvidia = {

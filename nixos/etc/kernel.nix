@@ -3,7 +3,8 @@
   boot.kernel.sysctl = { "vm.swappiness" = 10; };
 
   # Kernel
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  # prev: pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxPackages_zen;
 
   programs.nix-ld.enable = true;
 
