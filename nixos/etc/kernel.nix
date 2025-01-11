@@ -1,6 +1,8 @@
 { pkgs, ... }: {
   # Swappiness
-  boot.kernel.sysctl = { "vm.swappiness" = 10; };
+  boot.kernel.sysctl = {
+    "vm.swappiness" = 60;
+  };
 
   # Kernel
   # prev: pkgs.linuxPackages_latest;
