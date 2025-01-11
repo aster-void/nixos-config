@@ -1,6 +1,7 @@
 { pkgs, ... }: {
   fonts.packages = with pkgs.nerd-fonts; [
     cousine
+    space-mono
     code-new-roman
     dejavu-sans-mono
     meslo-lg
