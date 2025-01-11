@@ -11,8 +11,6 @@
     XDG_STATE_HOME = "$HOME/.local/state";
     LIBVA_DRIVER_NAME = "nvidia";
 
-    WLR_NO_HARDWARE_CURSORS = "1"; # invisible cursor fix
-
     # Not officially in the specification
     XDG_BIN_HOME = "$HOME/.bin";
     PATH = [
