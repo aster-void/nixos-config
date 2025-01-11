@@ -50,7 +50,7 @@
   programs.direnv = {
     enable = true;
     package = pkgs.direnv;
-    silent = false;
+    silent = true;
     loadInNixShell = true;
     direnvrcExtra = "";
     nix-direnv = {
