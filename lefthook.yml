@@ -1,7 +1,8 @@
 pre-commit:
   commands:
     format:
-      run: alejandra .
+      glob: "*.nix"
+      run: alejandra {staged_files}
       stage_fixed: true
     deadnix:
       run: deadnix --fail
