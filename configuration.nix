@@ -3,26 +3,19 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 # https://releases.nixos.org/nixos/unstable/
 { ... }: {
-  imports =
-    [
-      ./packages
-      ./etc
+  imports = [
+    ./packages
+    ./etc
 
-      ./validations/evaluate.nix
-      ./nix.nix
-      ./services.nix
-    ];
+    ./validations/evaluate.nix
+    ./nix.nix
+    ./services.nix
+  ];
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  nixpkgs.config.permittedInsecurePackages = [
-    "dotnet-core-combined"
-    "dotnet-core-6.0.428"
-    "dotnet-sdk-6.0.428"
-    "dotnet-sdk-7.0.410"
-    "dotnet-sdk-wrapped-6.0.428"
-  ];
+  nixpkgs.config.permittedInsecurePackages = [ ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
