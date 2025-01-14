@@ -4,7 +4,6 @@
   "...." = "cd ../../../";
   "....." = "cd ../../../../";
 
-
   n = "nvim";
   h = "hx";
   "h." = "hx .";
@@ -46,5 +45,6 @@
   rbb = "sudo nixos-rebuild boot";
   rbbb = "sudo nixos-rebuild boot && reboot";
   rbt = "sudo nixos-rebuild test";
-  # zoom-us = "flatpak run us.zoom.Zoom";
+  zoom-us = "us.zoom.Zoom";
+  yz = "yazi";
 }
