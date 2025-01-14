@@ -18,5 +18,6 @@
 
   nix.settings.trusted-substituters = [
     "https://hydra.nixos.org/"
+    "https://helix.cachix.org/"
   ];
 }
