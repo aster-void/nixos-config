@@ -1,7 +1,8 @@
 {pkgs, ...}: {
   imports = [
     # display manager
-    ./display-manager/sddm.nix
+    # ./display-manager/sddm.nix
+    ./display-manager/ly.nix
     # ./display-manager/gdm.nix
 
     # ./desktop/gnome.nix # uncommenting this fails on build, saying "conflicting pipewire and pusleaudio both turned on" or something
@@ -30,7 +31,7 @@
   # XDG portals (I'm not sure what this is)
   xdg.portal = {
     enable = true;
-    xdgOpenUsePortal = true;
+    # xdgOpenUsePortal = true;
     extraPortals = with pkgs; [
       xdg-desktop-portal-gtk
     ];
