@@ -1,6 +1,6 @@
 # TODO: move each of those configs to corresponding file (create one if not exists)
 {
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
   nix.settings.accept-flake-config = true;
   nix.settings.auto-optimise-store = true;
 
@@ -14,7 +14,7 @@
   system.autoUpgrade = {
     enable = false;
   };
-  nix.settings.trusted-users = [ "root" "aster" ];
+  nix.settings.trusted-users = ["root" "aster"];
 
   nix.settings.trusted-substituters = [
     "https://hydra.nixos.org/"

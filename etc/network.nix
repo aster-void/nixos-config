@@ -1,5 +1,4 @@
-{ host, ... }: {
-
+{host, ...}: {
   networking.hostName = "${host}"; # Define your hostname.
 
   # Open ports in the firewall.
@@ -28,6 +27,4 @@
       workstation = true;
     };
   };
-
 }
-

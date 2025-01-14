@@ -8,18 +8,22 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
   };
 
-  outputs = { nixpkgs, agenix, ... } @ inputs:
-    let
-      system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
+  outputs = {
+    nixpkgs,
+    agenix,
+    ...
+  } @ inputs: let
+    system = "x86_64-linux";
+    pkgs = nixpkgs.legacyPackages.${system};
 
-      extra = {
-        inherit system inputs;
-        user = "aster";
-        git-email = "137767097+aster-void@users.noreply.github.com";
-      };
+    extra = {
+      inherit system inputs;
+      user = "aster";
+      git-email = "137767097+aster-void@users.noreply.github.com";
+    };
 
-      mkSystemConfig = host: nixpkgs.lib.nixosSystem {
+    mkSystemConfig = host:
+      nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = {
           inherit inputs;
@@ -29,16 +33,17 @@
           ./configuration.nix
           ./hosts/${host}
           {
-            config._module.args = extra // {
-              inherit host inputs;
-            };
+            config._module.args =
+              extra
+              // {
+                inherit host inputs;
+              };
           }
         ];
       };
-    in
-    {
-      devShell.${system} = import ./shell.nix { inherit pkgs; };
-      nixosConfigurations.amberwood = mkSystemConfig "amberwood";
-      nixosConfigurations.bogster = mkSystemConfig "bogster";
-    };
+  in {
+    devShell.${system} = import ./shell.nix {inherit pkgs;};
+    nixosConfigurations.amberwood = mkSystemConfig "amberwood";
+    nixosConfigurations.bogster = mkSystemConfig "bogster";
+  };
 }

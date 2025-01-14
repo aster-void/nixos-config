@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   imports = [
     ./wayland.nix
   ];
@@ -22,4 +21,3 @@
     hyprlock
   ];
 }
-

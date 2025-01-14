@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   environment.sessionVariables = rec {
     EDITOR = "hx";
     BROWSER = "firefox";

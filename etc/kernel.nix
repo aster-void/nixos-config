@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   # Swappiness
   boot.kernel.sysctl = {
     "vm.swappiness" = 60;
@@ -13,5 +13,3 @@
   # Dbus
   services.dbus.enable = true;
 }
-
-

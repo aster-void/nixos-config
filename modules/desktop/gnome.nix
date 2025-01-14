@@ -1,5 +1,4 @@
-{ ... }:
-{
+{...}: {
   services.xserver = {
     enable = true;
     displayManager.gdm.enable = true;
@@ -7,5 +6,4 @@
   };
   # Gvfs
   services.gvfs.enable = true;
-
 }

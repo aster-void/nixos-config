@@ -1,6 +1,9 @@
-{ config, inputs, ... }:
 {
-  imports = [ inputs.nix-flatpak.nixosModules.nix-flatpak ];
+  config,
+  inputs,
+  ...
+}: {
+  imports = [inputs.nix-flatpak.nixosModules.nix-flatpak];
 
   assertions = [
     {
@@ -9,14 +12,15 @@
     }
   ];
 
-
   services.flatpak = {
     enable = true;
     uninstallUnmanaged = true;
-    remotes = [{
-      name = "flathub";
-      location = "https://flathub.org/repo/flathub.flatpakrepo";
-    }];
+    remotes = [
+      {
+        name = "flathub";
+        location = "https://flathub.org/repo/flathub.flatpakrepo";
+      }
+    ];
     packages = [
       # { appId = "com.brave.Browser"; origin = "flathub"; }
       "us.zoom.Zoom"

@@ -1,4 +1,4 @@
-{ ... }: {
+{...}: {
   imports = [
     #    ../personal/sddm-theme.nix
   ];

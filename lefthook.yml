@@ -1,7 +1,7 @@
 pre-commit:
   commands:
     format:
-      run: nixpkgs-fmt .
+      run: alejandra .
       stage_fixed: true
     deadnix:
       run: deadnix --fail

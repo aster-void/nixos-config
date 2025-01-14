@@ -1,5 +1,4 @@
-{ user, ... }:
-{
+{user, ...}: {
   # Define a user account.
   users.users.${user} = {
     isNormalUser = true;

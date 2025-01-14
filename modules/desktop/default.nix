@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   imports = [
     # display manager
     ./display-manager/sddm.nix
@@ -20,7 +19,7 @@
   # (or maybe it was just named poorly and may also work for wayland idk)
   services.xserver.enable = true;
   programs.xwayland.enable = true;
-  # for wayland dark theme  
+  # for wayland dark theme
   programs.dconf.enable = true;
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;

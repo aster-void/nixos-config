@@ -1,4 +1,4 @@
-{ ... }: {
+{...}: {
   imports = [
     ./grub.nix
     ./sound.nix

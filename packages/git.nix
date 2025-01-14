@@ -1,4 +1,8 @@
-{ user, git-email, ... }: {
+{
+  user,
+  git-email,
+  ...
+}: {
   programs.git = {
     enable = true;
     config = {

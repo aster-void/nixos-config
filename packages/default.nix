@@ -1,5 +1,9 @@
-{ pkgs, user, inputs, ... }:
 {
+  pkgs,
+  user,
+  inputs,
+  ...
+}: {
   imports = [
     ./git.nix
     ./obs.nix
