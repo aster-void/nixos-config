@@ -28,8 +28,8 @@
     fsautocomplete
 
     ## Nix
-    nixpkgs-fmt
-    nixd
+    alejandra
+    nil
 
     ## TS/JS/CSS/HTML/ESLint
     typescript

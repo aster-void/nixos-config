@@ -15,7 +15,7 @@
     fira-code-symbols
     dina-font
     proggyfonts
-
+    font-awesome
     dejavu_fonts
   ]);
   fonts.fontconfig = {
