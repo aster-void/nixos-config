@@ -26,7 +26,7 @@
         };
         modules = [
           agenix.nixosModules.default
-          ./nixos/configuration.nix
+          ./configuration.nix
           ./hosts/${host}
           {
             config._module.args = extra // {

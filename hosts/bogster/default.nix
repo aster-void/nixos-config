@@ -1,9 +1,9 @@
 { user, ... }: {
   imports = [
     ./hardware-configuration.nix
-    ../../nixos/modules/desktop
-    ../../nixos/modules/hardware
-    ../../nixos/modules/flatpak.nix
+    ../../modules/desktop
+    ../../modules/hardware
+    ../../modules/flatpak.nix
   ];
 
   services.displayManager.autoLogin.user = user;
