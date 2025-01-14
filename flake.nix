@@ -5,6 +5,7 @@
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     agenix.url = "github:ryantm/agenix";
     agenix.inputs.nixpkgs.follows = "nixpkgs";
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
   };
 
   outputs = { nixpkgs, agenix, ... } @ inputs:
@@ -20,6 +21,9 @@
 
       mkSystemConfig = host: nixpkgs.lib.nixosSystem {
         inherit system;
+        specialArgs = {
+          inherit inputs;
+        };
         modules = [
           agenix.nixosModules.default
           ./nixos/configuration.nix
