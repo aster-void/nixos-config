@@ -1,4 +1,4 @@
-{...}: let
+let
   shellAliases = import ./aliases.nix;
 in {
   environment.shellAliases = shellAliases;

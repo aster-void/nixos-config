@@ -8,4 +8,4 @@ pre-commit:
       run: deadnix --fail
     statix:
       glob: "*.nix"
-      run: statix check {staged_files}
+      run: statix check .

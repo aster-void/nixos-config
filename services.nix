@@ -5,26 +5,42 @@
     useXkbConfig = true; # use xkbOptions in tty.
   };
 
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-  # services.printing.drivers = [pkgs.cnijfilter2];
+  services = {
+    # Enable CUPS to print documents.
+    printing.enable = true;
+    # printing.drivers = [pkgs.cnijfilter2];
 
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
+    # Some programs need SUID wrappers, can be configured further or are
+    # started in user sessions.
+    # programs.mtr.enable = true;
+    # programs.gnupg.agent = {
+    #   enable = true;
+    #   enableSSHSupport = true;
+    # };
 
-  services.locate = {
-    enable = true;
-    interval = "hourly";
+    xserver.displayManager.setupCommands = ''
+      ${pkgs.xorg.xrandr}/bin/xrandr --output Virtual1 --primary --mode 1920x1080 --pos 0x0 --rotate normal
+    '';
+
+    locate = {
+      enable = true;
+      interval = "hourly";
+    };
+
+    # Enable the OpenSSH daemon.
+    # services.openssh.enable = true;
+
+    # Enable ClamAV.
+    clamav = {
+      daemon.enable = true;
+
+      scanner.enable = true;
+      updater.enable = true;
+
+      # third-party virus definition files? https://rseichter.github.io/fangfrisch/
+      fangfrisch.enable = true;
+    };
   };
-
-  services.xserver.displayManager.setupCommands = ''
-    ${pkgs.xorg.xrandr}/bin/xrandr --output Virtual1 --primary --mode 1920x1080 --pos 0x0 --rotate normal
-  '';
 
   security.polkit.enable = true;
   systemd = {
@@ -43,9 +59,6 @@
     };
   };
 
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
-
   # Enable direnv.
   programs.direnv = {
     enable = true;
@@ -57,16 +70,5 @@
       enable = true;
       package = pkgs.nix-direnv;
     };
-  };
-
-  # Enable ClamAV.
-  services.clamav = {
-    daemon.enable = true;
-
-    scanner.enable = true;
-    updater.enable = true;
-
-    # third-party virus definition files? https://rseichter.github.io/fangfrisch/
-    fangfrisch.enable = true;
   };
 }

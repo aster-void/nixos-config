@@ -7,7 +7,7 @@
     ./packages
     ./etc
 
-    ./validations/evaluate.nix
+    ./assertions.nix
     ./nix.nix
     ./services.nix
   ];

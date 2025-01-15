@@ -1,4 +1,4 @@
-{...}: {
+{
   # Timezone + Languages.
   time.timeZone = "Asia/Tokyo";
 

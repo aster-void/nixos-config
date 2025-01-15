@@ -10,20 +10,18 @@
     ./hyprland.nix
   ];
 
-  # Disabling X11 - go for startx
-  # services.xserver.autorun = false;
-  # services.xserver.displayManager.startx.enable = true;
+  services = {
+    displayManager.defaultSession = "hyprland-uwsm";
+    # Enable the X11 windowing system. (or maybe it was just named poorly and may also work for wayland idk)
+    xserver.enable = true;
+    # Enable touchpad support (enabled default in most desktopManager).
+    libinput.enable = true;
+  };
 
-  services.displayManager.defaultSession = "hyprland-uwsm";
-
-  # Enable the X11 windowing system.
-  # (or maybe it was just named poorly and may also work for wayland idk)
-  services.xserver.enable = true;
-  programs.xwayland.enable = true;
-  # for wayland dark theme
-  programs.dconf.enable = true;
-  # Enable touchpad support (enabled default in most desktopManager).
-  services.libinput.enable = true;
+  programs = {
+    xwayland.enable = true;
+    dconf.enable = true;
+  };
 
   # compat + gui libs (i'm not familiar)
   qt.enable = true;
