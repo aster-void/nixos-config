@@ -2,8 +2,9 @@
 pkgs.mkShell {
   buildInputs = with pkgs; [
     lefthook
-    nixpkgs-fmt
+    alejandra
     deadnix
+    statix
     nil
   ];
   shellHook = ''

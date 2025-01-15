@@ -6,3 +6,6 @@ pre-commit:
       stage_fixed: true
     deadnix:
       run: deadnix --fail
+    statix:
+      glob: "*.nix"
+      run: statix check {staged_files}
