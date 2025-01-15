@@ -8,7 +8,7 @@
     enable = true;
     xwayland.enable = true;
     # use Universal Wayland Session Manager
-    withUWSM = true;
+    withUWSM = false; # no.
   };
 
   environment.systemPackages = with pkgs; [
