@@ -22,6 +22,14 @@ It may also run breaking change at any time, so if you are using this, it's high
 6. run `nixos-rebuild switch`
 7. run `lefthook install` (optional, for development) (TODO: make a devshell)
 
+## Dirs
+
+`modules/`
+pluggable modules. works just by adding this to `imports` (i.e. no extra options to enable)
+
+`ext/`
+extend modules. doesn't have side effects unless the option is enabled.
+
 ## Things to do after
 
 - run `sudo waydroid init -s GAPPS -f` to activate waydroid
