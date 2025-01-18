@@ -27,8 +27,8 @@ It may also run breaking change at any time, so if you are using this, it's high
 `modules/`
 pluggable modules. works just by adding this to `imports` (i.e. no extra options to enable)
 
-`ext/`
-extend modules. doesn't have side effects unless the option is enabled.
+`plugins/`
+extend NixOS default modules. doesn't have side effects unless the option is enabled.
 
 ## Things to do after
 
