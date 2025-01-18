@@ -25,20 +25,16 @@
     mkSystemConfig = host:
       nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = {
-          inherit inputs;
-        };
+        specialArgs =
+          extra
+          // {
+            inherit host;
+          };
+
         modules = [
           agenix.nixosModules.default
           ./configuration.nix
           ./hosts/${host}
-          {
-            config._module.args =
-              extra
-              // {
-                inherit host inputs;
-              };
-          }
         ];
       };
   in {
