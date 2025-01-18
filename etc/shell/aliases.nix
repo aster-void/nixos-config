@@ -47,4 +47,6 @@
   rbt = "sudo nixos-rebuild test";
   zoom-us = "us.zoom.Zoom";
   yz = "yazi";
+
+  nuke = "git checkout -f HEAD && git clean -xdf";
 }
