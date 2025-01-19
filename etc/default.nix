@@ -9,5 +9,6 @@
     ./pwn.nix
     ./shell
     ./user.nix
+    ./sound-theme.nix
   ];
 }
