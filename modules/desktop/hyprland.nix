@@ -17,7 +17,7 @@
     hyprland-protocols
     hyprcursor
     hyprpaper
-    # hypridle
+    hypridle
     hyprlock
   ];
 }
