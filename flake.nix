@@ -38,7 +38,7 @@
         ];
       };
   in {
-    devShell.${system} = import ./shell.nix {inherit pkgs;};
+    devShell.${system} = pkgs.callPackage ./shell.nix {inherit agenix;};
     nixosConfigurations.amberwood = mkSystemConfig "amberwood";
     nixosConfigurations.bogster = mkSystemConfig "bogster";
   };

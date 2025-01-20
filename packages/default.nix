@@ -1,7 +1,6 @@
 {
   pkgs,
   user,
-  inputs,
   ...
 }: {
   imports = [
@@ -19,12 +18,6 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    # devel of this flake
-    # TODO: migrate this config to flakes, s.t. I can put the devShell config to there
-    lefthook
-    deadnix
-    inputs.agenix.packages.${pkgs.system}.default
-
     # CLI Environment
     ## busybox
     lsof
@@ -125,6 +118,9 @@
     wget
     ripgrep
     gettext
+
+    # nix dev
+    nix-index
 
     # core
     avahi # internet
