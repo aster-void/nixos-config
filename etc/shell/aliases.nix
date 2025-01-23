@@ -37,7 +37,7 @@
   flake = "nix flake";
 
   hs = "home-manager switch";
-  hypr = "cd ~/.config/hypr/; ls";
+  hypr = "cd ~/.dotfiles/.config/hypr/; ls";
   home = "home-manager";
   nixgc = "nix-collect-garbage";
   rb = "sudo nixos-rebuild";
