@@ -31,7 +31,6 @@
     nil
 
     ## TS/JS/CSS/HTML/ESLint
-    typescript
     nodePackages_latest.typescript-language-server
     tailwindcss-language-server
     vscode-langservers-extracted # HTML/CSS/JSON/ESLint all in one
