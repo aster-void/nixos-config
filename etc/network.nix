@@ -2,6 +2,15 @@
   networking = {
     hostName = "${host}"; # Define your hostname.
 
+    nameservers = [
+      # cloudflare
+      "1.1.1.1"
+      "1.0.0.1"
+      # google
+      "8.8.8.8"
+      "8.8.4.4"
+    ];
+
     # Open ports in the firewall.
     # networking.firewall.allowedTCPPorts = [ ... ];
     # networking.firewall.allowedUDPPorts = [ ... ];
