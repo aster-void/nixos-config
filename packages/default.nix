@@ -13,7 +13,6 @@
   users.users.${user}.packages = with pkgs; [
     # CLI Tools
     btop
-    dstat
     cpufetch
   ];
 
