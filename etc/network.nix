@@ -17,7 +17,11 @@
     # networking.firewall.allowedTCPPorts = [ ... ];
     # networking.firewall.allowedUDPPorts = [ ... ];
     # Or disable the firewall altogether.
-    firewall.enable = true;
+    firewall = {
+      enable = true;
+      allowedTCPPorts = [53317];
+      allowedUDPPorts = [53317];
+    };
 
     # Configure network proxy if necessary
     # networking.proxy.default = "http://user:password@proxy:port/";
