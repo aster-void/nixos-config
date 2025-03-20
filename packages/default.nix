@@ -73,7 +73,7 @@
 
     # utils
     ## file
-    gwenview # file manager that actually works
+    kdePackages.gwenview # file manager that actually works
     yazi # cli file manager
     unzip # unzips files
     ffmpeg # convert any music/video files
