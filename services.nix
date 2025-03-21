@@ -32,13 +32,13 @@
 
     # Enable ClamAV.
     clamav = {
-      daemon.enable = true;
+      daemon.enable = false;
 
-      scanner.enable = true;
-      updater.enable = true;
+      scanner.enable = false;
+      updater.enable = false;
 
       # third-party virus definition files? https://rseichter.github.io/fangfrisch/
-      fangfrisch.enable = true;
+      fangfrisch.enable = false;
     };
   };
 
