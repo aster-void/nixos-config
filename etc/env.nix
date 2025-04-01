@@ -8,7 +8,6 @@
     XDG_CONFIG_HOME = "$HOME/.config";
     XDG_DATA_HOME = "$HOME/.local/share";
     XDG_STATE_HOME = "$HOME/.local/state";
-    LIBVA_DRIVER_NAME = "nvidia";
 
     # Not officially in the specification
     XDG_BIN_HOME = "$HOME/.bin";

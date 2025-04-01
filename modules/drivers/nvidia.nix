@@ -1,8 +1,21 @@
-{config, ...}: {
+{
+  config,
+  pkgs,
+  ...
+}: {
   # Load nvidia driver for Xorg and Wayland
   services.xserver.videoDrivers = ["nvidia"];
   nixpkgs.config.nvidia.acceptLicense = true;
 
+  environment.sessionVariables = {
+    GBM_BACKEND = "nvidia-drm";
+    LIBVA_DRIVER_NAME = "nvidia";
+    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+  };
+
+  hardware.graphics.extraPackages = [
+    pkgs.nvidia-vaapi-driver
+  ];
   hardware.nvidia = {
     # Modesetting is required.
     modesetting.enable = true;
