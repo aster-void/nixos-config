@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   environment.sessionVariables = rec {
     EDITOR = "hx";
-    BROWSER = "firefox";
+    BROWSER = "zen-beta";
 
     # XDG_RUNTIME_DIR = "/run/user/1000";
     XDG_CACHE_HOME = "$HOME/.cache";
