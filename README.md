@@ -22,6 +22,10 @@ It may also run breaking change at any time, so if you are using this, it's high
 6. run `nixos-rebuild switch`
 7. run `lefthook install` (optional, for development) (TODO: make a devshell)
 
+### Secure Boot
+
+read this: https://nixos.wiki/wiki/Secure_Boot
+
 ## Dirs
 
 `modules/`
