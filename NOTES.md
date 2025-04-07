@@ -13,3 +13,7 @@
       - some electron apps may have background worker that interfere with newly launched app frontend. make sure to `killall -r slack` beforehand.
     - (complex but automatic) edit `~/.local/share/applications/{app}.desktop` and set `Exec={app} --enable-wayland-ime %U` + required fields. (ref: <https://wiki.archlinux.org/title/Desktop_entries>)
       - or, you can use home-manager to manage that file too. see my home-manager in my dotfiles repo for more info.
+
+- issue: `error: path '/nix/store/0bkinqzqz1v1cv143ihfd4dsnjkh1nsf-linux-6.14-modules-shrunk/lib' is not in the Nix store`
+  reason: ?
+  solution?

@@ -34,3 +34,4 @@ extend NixOS default modules. doesn't have side effects unless the option is ena
 
 - run `sudo waydroid init -s GAPPS -f` to activate waydroid
 - clone .dotfiles and decorations. (decorations is private for copyright reason)
+

@@ -39,7 +39,10 @@
       };
   in {
     devShell.${system} = pkgs.callPackage ./shell.nix {inherit agenix;};
-    nixosConfigurations.amberwood = mkSystemConfig "amberwood";
-    nixosConfigurations.bogster = mkSystemConfig "bogster";
+    nixosConfigurations = {
+      amberwood = mkSystemConfig "amberwood";
+      bogster = mkSystemConfig "bogster";
+      carbon = mkSystemConfig "carbon";
+    };
   };
 }
