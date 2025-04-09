@@ -15,5 +15,5 @@
       - or, you can use home-manager to manage that file too. see my home-manager in my dotfiles repo for more info.
 
 - issue: `error: path '/nix/store/0bkinqzqz1v1cv143ihfd4dsnjkh1nsf-linux-6.14-modules-shrunk/lib' is not in the Nix store`
-  reason: ?
-  solution?
+  reason: Nix version is too old (2.15?)
+  solution: install nixos at 24.11, then upgrate to latest (or update installer and just reinstall)
