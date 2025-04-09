@@ -1,6 +1,6 @@
 {...}: {
   imports = [
-    ./grub.nix
+    ./bootloader.nix
     ./sound.nix
     ./bluetooth.nix
     ./battery.nix
