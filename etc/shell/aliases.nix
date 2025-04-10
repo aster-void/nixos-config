@@ -45,7 +45,6 @@
   rbb = "sudo nixos-rebuild boot";
   rbbb = "sudo nixos-rebuild boot && reboot";
   rbt = "sudo nixos-rebuild test";
-  zoom-us = "us.zoom.Zoom";
   yz = "yazi";
 
   nuke = "git checkout -f HEAD && git clean -xdf";
