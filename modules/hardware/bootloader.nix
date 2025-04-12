@@ -1,29 +1,29 @@
 {
   pkgs,
   inputs,
+  lib,
   ...
-}: {
+}: let
+  lanzaboote = true; # TODO: make it configurable
+in {
   imports = [
     inputs.lanzaboote.nixosModules.lanzaboote
   ];
+  # enable secure boot with lanzaboote
   environment.systemPackages = [pkgs.sbctl];
-  # enable secure boot with lanzaboote (todo)
-  # boot.lanzaboote = {
-  #   enable = true;
-  #   pkiBundle = "/var/lib/sbctl";
-  #   systemd-boot.enable = false;
-  # };
+  boot.lanzaboote = lib.mkIf lanzaboote {
+    enable = true;
+    pkiBundle = "/var/lib/sbctl";
+  };
   # grub.
   boot.loader = {
-    systemd-boot = {
-      enable = true;
-    };
+    systemd-boot.enable = ! lanzaboote;
     efi = {
       canTouchEfiVariables = true;
       efiSysMountPoint = "/boot";
     };
     grub = {
-      enable = false;
+      enable = ! lanzaboote;
 
       efiSupport = true;
       useOSProber = true;
