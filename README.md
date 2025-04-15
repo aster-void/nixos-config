@@ -20,11 +20,11 @@ It may also run breaking change at any time, so if you are using this, it's high
 4. run ./init.sh
 5. edit the config files (I recommend editing ./etc/keymap.nix, ./local/password.nix and ./local/optional.nix before running rebuild)
 6. run `nixos-rebuild switch`
-7. run `lefthook install` (optional, for development) (TODO: make a devshell)
+7. run `lefthook install` (optional, for development)
 
 ### Secure Boot
 
-read this: https://nixos.wiki/wiki/Secure_Boot
+read this: <https://nixos.wiki/wiki/Secure_Boot>
 
 ## Dirs
 
@@ -38,4 +38,4 @@ extend NixOS default modules. doesn't have side effects unless the option is ena
 
 - run `sudo waydroid init -s GAPPS -f` to activate waydroid
 - clone .dotfiles and decorations. (decorations is private for copyright reason)
-
+- install lanzaboote. follow <https://github.com/nix-community/lanzaboote/blob/master/docs/QUICK_START.md>
