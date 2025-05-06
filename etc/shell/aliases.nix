@@ -4,7 +4,7 @@
   "...." = "cd ../../../";
   "....." = "cd ../../../../";
 
-  n = "nvim";
+  # n = "nvim";
   h = "hx";
   "h." = "hx .";
 
@@ -46,6 +46,7 @@
   rbbb = "sudo nixos-rebuild boot && reboot";
   rbt = "sudo nixos-rebuild test";
   yz = "yazi";
+  sd = "shutdown";
 
   nuke = "git checkout -f HEAD && git clean -xdf";
 }
