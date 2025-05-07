@@ -10,6 +10,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          # go to Account / Settings > Developer Settings > Personal access tokens
+          # then create one with permission: Content WRITE
           token: ${{ secrets.SELF_CONTENT_WRITE_TOKEN }}
       - uses: cachix/install-nix-action@v27
         with:
