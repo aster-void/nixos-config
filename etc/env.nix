@@ -8,6 +8,10 @@
     XDG_CONFIG_HOME = "$HOME/.config";
     XDG_DATA_HOME = "$HOME/.local/share";
     XDG_STATE_HOME = "$HOME/.local/state";
+    MOZ_ENABLE_WAYLAND = "1";
+    XDG_SESSION_TYPE = "wayland";
+    GDK_BACKEND = "wayland";
+    ELECTRON_DISABLE_GPU = "true";
 
     # Not officially in the specification
     XDG_BIN_HOME = "$HOME/.bin";
