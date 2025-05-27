@@ -52,6 +52,7 @@
     platinum-searcher # find but better
     ncdu # tui disk usage
     fzf
+    eza # ls on steroids
 
     # network
     curl
