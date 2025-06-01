@@ -3,6 +3,10 @@
   pkgs,
   ...
 }: {
+  environment.systemPackages = [
+    pkgs.egl-wayland
+    pkgs.libglvnd
+  ];
   # Load nvidia driver for Xorg and Wayland
   services.xserver.videoDrivers = ["nvidia"];
   hardware.graphics = {
