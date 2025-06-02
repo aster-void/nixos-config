@@ -95,6 +95,7 @@
     blueberry # gui bluetooth manager
     arandr # display placer
     volumeicon # edit volume from sys tray
+    appimage-run
 
     ## hardware info
     baobab # harddisk usage visualizer
