@@ -32,6 +32,7 @@
   sl = "ls";
   claer = "clear";
   cl = "clear";
+  ez = "eza --icons";
 
   nixman = "cd /etc/nixos/; sudo -s;";
   flake = "nix flake";
