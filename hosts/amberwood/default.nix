@@ -3,6 +3,7 @@
     ./hardware-configuration.nix
     ../../modules/desktop
     ../../modules/hardware
+    ../../modules/hardware/bootloader/lanzaboote.nix
     ../../modules/flatpak.nix
     ../../modules/drivers/logitech.nix
     ../../modules/drivers/nvidia.nix

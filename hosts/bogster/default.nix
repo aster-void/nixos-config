@@ -7,6 +7,7 @@
     ./hardware-configuration.nix
     ../../modules/desktop
     ../../modules/hardware
+    ../../modules/hardware/bootloader/grub.nix
     ../../modules/flatpak.nix
   ];
 
