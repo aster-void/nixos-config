@@ -8,7 +8,7 @@
     pkgs.libglvnd
   ];
   # Load nvidia driver for Xorg and Wayland
-  services.xserver.videoDrivers = ["nvidia"];
+  services.xserver.videoDrivers = ["modesetting" "intel" "nvidia"];
   hardware.graphics = {
     enable = true;
     extraPackages = [
