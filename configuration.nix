@@ -1,7 +1,3 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-# https://releases.nixos.org/nixos/unstable/
 {
   imports = [
     ./packages
@@ -12,7 +8,6 @@
     ./services.nix
   ];
 
-  # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
   nixpkgs.config.permittedInsecurePackages = [];

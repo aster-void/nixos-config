@@ -8,43 +8,59 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     lanzaboote.url = "github:nix-community/lanzaboote/v0.4.2";
     lanzaboote.inputs.nixpkgs.follows = "nixpkgs";
+    shared-config.url = "github:aster-void/shared-config";
   };
 
   outputs = {
     nixpkgs,
     agenix,
+    shared-config,
     ...
   } @ inputs: let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
+    shared = shared-config.config;
 
-    extra = {
-      inherit system inputs;
-      user = "aster";
-      git-email = "137767097+aster-void@users.noreply.github.com";
-    };
-
-    mkSystemConfig = host:
+    mkSystemConfig = {
+      host,
+      system,
+    }:
       nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs =
-          extra
-          // {
-            inherit host;
-          };
+        specialArgs = {
+          inherit system inputs host shared;
+        };
 
         modules = [
           agenix.nixosModules.default
           ./configuration.nix
           ./hosts/${host}
+          (import ./templates/packages.nix {
+            enable-pkgs = [
+              "cli"
+              "editor"
+              [
+                pkgs.helix
+              ]
+            ];
+          })
         ];
       };
   in {
     devShell.${system} = pkgs.callPackage ./shell.nix {inherit agenix;};
     nixosConfigurations = {
-      amberwood = mkSystemConfig "amberwood";
-      bogster = mkSystemConfig "bogster";
-      carbon = mkSystemConfig "carbon";
+      amberwood = mkSystemConfig {
+        host = "amberwood";
+        system = "x86_64-linux";
+      };
+      bogster = mkSystemConfig {
+        host = "bogster";
+        system = "x86_64-linux";
+      };
+      carbon = mkSystemConfig {
+        host = "carbon";
+        system = "x86_64-linux";
+      };
     };
   };
 }

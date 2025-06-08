@@ -7,7 +7,7 @@
     ./i18n
     ./network.nix
     ./pwn.nix
-    ./shell
+    ./shell.nix
     ./user.nix
     ./sound-theme.nix
   ];

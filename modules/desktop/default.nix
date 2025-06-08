@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  shared,
+  pkgs,
+  ...
+}: {
   imports = [
     # display manager
     # ./display-manager/sddm.nix
@@ -34,4 +38,6 @@
       xdg-desktop-portal-gtk
     ];
   };
+
+  services.displayManager.autoLogin.user = shared.system.user;
 }

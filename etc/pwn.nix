@@ -1,9 +1,9 @@
 {
+  shared,
   pkgs,
-  user,
   ...
 }: {
-  users.users.${user}.packages = with pkgs; [
+  users.users.${shared.system.user}.packages = with pkgs; [
     ghidra
   ];
 }

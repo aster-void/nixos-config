@@ -1,8 +1,8 @@
-{user, ...}: {
+{shared, ...}: {
   # Define a user account.
-  users.users.${user} = {
+  users.users.${shared.system.user} = {
     isNormalUser = true;
-    description = user;
+    description = shared.system.user;
     extraGroups = [
       "mlocate"
       "networkmanager"

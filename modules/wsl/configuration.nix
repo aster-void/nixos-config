@@ -4,10 +4,12 @@
 # NixOS-WSL specific options are documented on the NixOS-WSL repository:
 # https://github.com/nix-community/NixOS-WSL
 {
+  shared,
   lib,
-  user,
   ...
-}: {
+}: let
+  inherit (shared.system) user;
+in {
   imports = [
     # include NixOS-WSL modules
     <nixos-wsl/modules>
