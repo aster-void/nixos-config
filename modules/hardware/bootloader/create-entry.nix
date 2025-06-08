@@ -13,7 +13,9 @@
       enable = true;
       pkiBundle = "/var/lib/sbctl";
     };
-    boot.loader.systemd-boot.enable = true;
+    boot.loader = {
+      # systemd-boot.enable = true;
+    };
   };
   grubOptions = {
     # grub.
