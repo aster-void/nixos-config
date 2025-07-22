@@ -6,7 +6,7 @@
 
   # Kernel
   # prev: pkgs.linuxPackages_latest, linuxPackages_zen;
-  boot.kernelPackages = pkgs.linuxPackages_zen;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   programs.nix-ld.enable = true;
 
