@@ -38,13 +38,17 @@ in {
         ]
         ++ lib.lists.optionals cfg.games.enable
         [
+          # {
+          #   appId = "moe.launcher.the-honkers-railway-launcher";
+          #   origin = "launcher.moe";
+          # }
+          # {
+          #   appId = "moe.launcher.sleepy-launcher";
+          #   origin = "launcher.moe";
+          # }
           {
-            appId = "moe.launcher.the-honkers-railway-launcher";
-            origin = "launcher.moe";
-          }
-          {
-            appId = "moe.launcher.sleepy-launcher";
-            origin = "launcher.moe";
+            appId = "io.mrarm.mcpelauncher";
+            origin = "flathub";
           }
         ];
     };
