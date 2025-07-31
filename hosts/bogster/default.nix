@@ -14,4 +14,6 @@
   hardware.graphics.extraPackages = [pkgs.intel-media-driver];
 
   environment.systemPackages = with pkgs; [prismlauncher];
+
+  my.apps.games.enable = true;
 }
