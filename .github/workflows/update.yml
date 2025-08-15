@@ -17,6 +17,7 @@ jobs:
         with:
           nix_path: "nixpkgs=flake:nixpkgs"
       - run: nix flake update
+      - run: nix build .#nixosConfigurations.amberwood.activationPackage --no-link
       - uses: EndBug/add-and-commit@v9
         with:
           message: "(bot)schedule: update flake"
