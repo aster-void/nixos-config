@@ -10,6 +10,19 @@
     printing.enable = true;
     # printing.drivers = [pkgs.cnijfilter2];
 
+    # Enable comin for automatic rebuilds from GitHub
+    comin = {
+      enable = true;
+      remotes = [
+        {
+          name = "origin";
+          url = "https://github.com/aster-void/nixos-config.git";
+          branches.main.name = "main";
+          poller.period = 3 * 3600;
+        }
+      ];
+    };
+
     # Some programs need SUID wrappers, can be configured further or are
     # started in user sessions.
     # programs.mtr.enable = true;

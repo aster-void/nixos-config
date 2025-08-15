@@ -9,12 +9,17 @@
     lanzaboote.url = "github:nix-community/lanzaboote/v0.4.2";
     lanzaboote.inputs.nixpkgs.follows = "nixpkgs";
     shared-config.url = "github:aster-void/shared-config";
+    comin = {
+      url = "github:nlewo/comin";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
     nixpkgs,
     agenix,
     shared-config,
+    comin,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -33,6 +38,7 @@
 
         modules = [
           agenix.nixosModules.default
+          comin.nixosModules.comin
           ./configuration.nix
           ./hosts/${host}
           (import ./templates/packages.nix {
