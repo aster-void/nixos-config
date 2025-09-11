@@ -17,6 +17,9 @@
         #Optional helps save long term battery health
         START_CHARGE_THRESH_BAT0 = 40; # 40 and bellow it starts to charge
         STOP_CHARGE_THRESH_BAT0 = 80; # 80 and above it stops charging
+
+        USB_AUTOSUSPEND = 1; # autosuspend 自体は有効
+        USB_BLACKLIST = "1e7d:2dcd 046d:c548"; # ROCCATマウス & Logitech Bolt Receiver を除外
       };
     };
 
