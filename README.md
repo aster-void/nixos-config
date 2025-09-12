@@ -1,8 +1,9 @@
----
-TODO
----
-
 # README
+
+## Deprecation Notice
+
+This configuration is no longer used on my workstations.
+This has been merged to <https://github.com/aster-void/dotfiles>.
 
 ## WARNING
 
